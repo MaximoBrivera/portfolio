@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>UI/UX Designer & Visual Artist | Máximo Batista - MrBanika</title>
+    <!-- Updated: Parallax fixes applied -->
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Máximo Batista (MrBanika) - UI/UX Designer and Visual Artist specialized in graphic design, digital experiences and visual storytelling. Creating bold, clean and functional designs.">
@@ -52,10 +53,11 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
     
     <!-- Fonts with display=swap for better performance -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS - Deferred for better performance -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -80,9 +82,179 @@
         }
     </script>
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Critical CSS for mobile performance - Minimal impact on desktop -->
+    <style>
+        /* Critical mobile styles - Only affects mobile */
+        @media (max-width: 768px) {
+            /* Prevent layout shift on mobile */
+            .hero-section picture img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            
+            /* Optimize mobile font loading */
+            body {
+                font-display: swap;
+            }
+            
+            /* Center icons in mobile circles */
+            .social-links a {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                line-height: 1 !important;
+            }
+            
+            .social-links a i {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                height: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        
+        /* Desktop positioning - Force left alignment */
+        @media (min-width: 1280px) {
+            .hero-content {
+                position: absolute !important;
+                left: 0 !important;
+                top: 70% !important;
+                transform: translateY(-50%) !important;
+                width: 45% !important;
+                max-width: 600px !important;
+                padding-left: 80px !important;
+                padding-right: 0 !important;
+                text-align: left !important;
+                align-items: flex-start !important;
+            }
+            
+            .hero-content h1 {
+                text-align: left !important;
+            }
+            
+            .hero-content .social-links {
+                display: block !important;
+                margin-top: 10px !important;
+            }
+            
+            .hero-content .social-links a {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                margin-bottom: 10px !important;
+                width: 50px !important;
+                height: 50px !important;
+                padding: 0 !important;
+                border: 2px solid rgba(255, 255, 255, 0.3) !important;
+                border-radius: 50% !important;
+                background: rgba(0, 0, 0, 0.6) !important;
+                transition: all 0.3s ease !important;
+                font-size: 1.2rem !important;
+                backdrop-filter: blur(10px) !important;
+                text-align: center !important;
+                line-height: 1 !important;
+            }
+            
+            .hero-content .social-links a i {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                height: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            
+            .hero-content .social-links a:hover {
+                background: rgba(255, 255, 255, 0.2) !important;
+                border-color: rgba(255, 255, 255, 0.6) !important;
+                transform: translateY(-3px) !important;
+                box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1) !important;
+            }
+        }
+        
+        /* Mobile menu - Increase background opacity */
+        @media (max-width: 1279px) {
+            .nav-links {
+                background: rgba(0, 0, 0, 0.75) !important;
+                backdrop-filter: blur(15px) !important;
+            }
+            
+            /* Navbar background when menu is open */
+            .main-header.menu-open {
+                background: rgba(0, 0, 0, 0.9) !important;
+                backdrop-filter: blur(20px) !important;
+            }
+            
+            /* Add blur effect to body when menu is open */
+            body.menu-open {
+                overflow: hidden !important;
+            }
+            
+            body.menu-open::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+                z-index: 999;
+                pointer-events: none;
+            }
+        }
+        
+        /* Desktop navbar - Force show links and hide menu button */
+        @media (min-width: 1280px) {
+            .mobile-menu-toggle {
+                display: none !important;
+            }
+            
+            .nav-links {
+                display: flex !important;
+                position: static !important;
+                flex-direction: row !important;
+                background: transparent !important;
+                backdrop-filter: none !important;
+                width: auto !important;
+                height: auto !important;
+                padding-top: 0 !important;
+                left: auto !important;
+                top: auto !important;
+            }
+            
+            .nav-links li {
+                margin: 0 !important;
+                margin-left: 2rem !important;
+            }
+            
+            .nav-links a {
+                padding: 0 !important;
+            }
+        }
+        
+        /* Reduced motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+    
+    <!-- Non-critical stylesheets -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -117,12 +289,12 @@
     <header class="fixed top-0 left-0 w-full h-[70px] tablet:h-[65px] laptop:h-[70px] desktop:h-[80px] xl-desktop:h-[90px] px-[6%] tablet:px-[4%] laptop:px-[6%] desktop:px-[8%] xl-desktop:px-[10%] flex justify-between items-center bg-transparent z-[1000] transition-colors duration-300 main-header" role="banner">
         <nav class="flex justify-between items-center w-full navbar" role="navigation" aria-label="Main navigation">
             <a href="#hero" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-3xl xl-desktop:text-4xl font-semibold text-white ml-0 tablet:ml-2 laptop:ml-2.5 desktop:ml-4 font-inter logo" aria-label="Go to home - MrBanika">MrBanika</a>
-            <button class="block tablet:hidden bg-none border-none text-white text-2xl cursor-pointer p-1 focus:outline-2 focus:outline-white focus:outline-offset-2 mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+            <button class="block desktop:hidden bg-none border-none text-white text-2xl cursor-pointer p-1 focus:outline-2 focus:outline-white focus:outline-offset-2 mobile-menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <ul class="fixed tablet:static top-[60px] tablet:top-auto -left-full tablet:left-auto w-full tablet:w-auto h-[calc(100vh-60px)] tablet:h-auto bg-black/95 tablet:bg-transparent backdrop-blur-lg tablet:backdrop-blur-none flex-col tablet:flex-row justify-start tablet:justify-center items-center tablet:items-center pt-12 tablet:pt-0 transition-all duration-300 list-none flex ml-auto nav-links">
-                <li class="my-5 tablet:my-0 tablet:ml-8 laptop:ml-7 desktop:ml-12 xl-desktop:ml-16"><a href="#work" class="text-white text-lg tablet:text-lg laptop:text-base desktop:text-lg xl-desktop:text-xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 tablet:p-0 hover:text-gray-300 desktop:hover:scale-105" aria-label="View work and projects">Work</a></li>
-                <li class="my-5 tablet:my-0 tablet:ml-8 laptop:ml-7 desktop:ml-12 xl-desktop:ml-16"><a href="#about" class="text-white text-lg tablet:text-lg laptop:text-base desktop:text-lg xl-desktop:text-xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 tablet:p-0 hover:text-gray-300 desktop:hover:scale-105" aria-label="Learn more about me">About</a></li>
+            <ul class="fixed desktop:static top-[60px] desktop:top-auto -left-full desktop:left-auto w-full desktop:w-auto h-[calc(100vh-60px)] desktop:h-auto bg-black/95 desktop:bg-transparent backdrop-blur-lg desktop:backdrop-blur-none flex-col desktop:flex-row justify-start desktop:justify-center items-center desktop:items-center pt-12 desktop:pt-0 transition-all duration-300 list-none flex ml-auto nav-links">
+                <li class="my-5 desktop:my-0 desktop:ml-8 xl-desktop:ml-12"><a href="#work" class="text-white text-lg desktop:text-lg xl-desktop:text-xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105" aria-label="View work and projects">Work</a></li>
+                <li class="my-5 desktop:my-0 desktop:ml-8 xl-desktop:ml-12"><a href="#about" class="text-white text-lg desktop:text-lg xl-desktop:text-xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105" aria-label="Learn more about me">About</a></li>
             </ul>
         </nav>
     </header>
@@ -132,14 +304,14 @@
             <!-- Optimized background image with WebP support -->
             <picture class="absolute inset-0 w-full h-full">
                 <source srcset="assets/q2.webp" type="image/webp">
-                <img src="assets/q2.jpg" alt="Hero background" class="w-full h-full object-cover object-center">
+                <img src="assets/q2.jpg" alt="Hero background" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high" width="1920" height="1080">
             </picture>
-            <div class="pt-0 tablet:pt-[550px] laptop:pt-[450px] desktop:pt-[650px] xl-desktop:pt-[700px] px-5 tablet:px-10 laptop:px-12 desktop:px-16 xl-desktop:px-20 pb-12 tablet:pb-20 laptop:pb-24 desktop:pb-32 xl-desktop:pb-40 pl-5 tablet:pl-20 laptop:pl-24 desktop:pl-32 xl-desktop:pl-40 z-[2] relative mr-0 tablet:mr-auto laptop:mr-auto desktop:mr-auto max-w-full tablet:max-w-[60%] laptop:max-w-[50%] desktop:max-w-[45%] xl-desktop:max-w-[40%] text-center tablet:text-left laptop:text-left desktop:text-left flex flex-col justify-center items-center tablet:items-start laptop:items-start desktop:items-start will-change-transform transform-gpu transition-transform duration-100 ease-out hero-content">
+            <div class="pt-0 tablet:pt-[550px] laptop:pt-[450px] desktop:pt-[650px] xl-desktop:pt-[700px] px-5 tablet:px-10 laptop:px-12 desktop:px-16 xl-desktop:px-20 pb-12 tablet:pb-20 laptop:pb-24 desktop:pb-32 xl-desktop:pb-40 pl-5 tablet:pl-20 laptop:pl-24 desktop:pl-32 xl-desktop:pl-40 z-[2] relative mr-0 tablet:mr-auto laptop:mr-auto desktop:mr-auto max-w-full tablet:max-w-[60%] laptop:max-w-[50%] desktop:max-w-[45%] xl-desktop:max-w-[40%] text-center tablet:text-left laptop:text-left desktop:text-left flex flex-col justify-center items-center tablet:items-start laptop:items-start desktop:items-start will-change-transform transform-gpu transition-transform duration-100 ease-out hero-content" style="left: 0; transform: translateX(0);">
                 <h1 class="text-3xl tablet:text-4xl laptop:text-4xl desktop:text-4xl xl-desktop:text-5xl mb-5 tablet:mb-6 laptop:mb-7 desktop:mb-6 xl-desktop:mb-8 font-inter font-semibold leading-tight desktop:leading-[1.1] xl-desktop:leading-[1.05]">UI/UX Designer & Visual Artist</h1>
                 <div class="flex tablet:block laptop:block desktop:block xl-desktop:block justify-center tablet:justify-start laptop:justify-start desktop:justify-start xl-desktop:justify-start gap-4 tablet:gap-0 laptop:gap-0 desktop:gap-0 xl-desktop:gap-0 mt-5 tablet:mt-0 laptop:mt-0 desktop:mt-0 social-links" role="navigation" aria-label="Social media links">
-                    <a href="https://www.linkedin.com/in/maximo-batista-2954b1226/" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl xl-desktop:text-3xl mr-0 tablet:mr-5 laptop:mr-5 desktop:mr-5 xl-desktop:mr-6 inline-block tablet:block laptop:block desktop:block xl-desktop:block mt-0 tablet:mt-4 laptop:mt-4 desktop:mt-4 xl-desktop:mt-6 p-2 tablet:p-0 laptop:p-0 desktop:p-0 border border-white/30 tablet:border-none laptop:border-none desktop:border-none rounded-full tablet:rounded-none laptop:rounded-none desktop:rounded-none w-11 h-11 tablet:w-auto tablet:h-auto laptop:w-auto laptop:h-auto desktop:w-auto desktop:h-auto flex tablet:inline laptop:inline desktop:inline items-center justify-center transition-all duration-300 hover:bg-white/10 tablet:hover:bg-transparent laptop:hover:bg-transparent desktop:hover:bg-transparent hover:-translate-y-0.5 tablet:hover:translate-y-0 laptop:hover:translate-y-0 desktop:hover:scale-110 desktop:hover:-translate-y-1" aria-label="Máximo Batista's LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                    <a href="mailto:maximo.bxxiv@hotmail.com" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl xl-desktop:text-3xl mr-0 tablet:mr-5 laptop:mr-5 desktop:mr-5 xl-desktop:mr-6 inline-block tablet:block laptop:block desktop:block xl-desktop:block mt-0 tablet:mt-4 laptop:mt-4 desktop:mt-4 xl-desktop:mt-6 p-2 tablet:p-0 laptop:p-0 desktop:p-0 border border-white/30 tablet:border-none laptop:border-none desktop:border-none rounded-full tablet:rounded-none laptop:rounded-none desktop:rounded-none w-11 h-11 tablet:w-auto tablet:h-auto laptop:w-auto laptop:h-auto desktop:w-auto desktop:h-auto flex tablet:inline laptop:inline desktop:inline items-center justify-center transition-all duration-300 hover:bg-white/10 tablet:hover:bg-transparent laptop:hover:bg-transparent desktop:hover:bg-transparent hover:-translate-y-0.5 tablet:hover:translate-y-0 laptop:hover:translate-y-0 desktop:hover:scale-110 desktop:hover:-translate-y-1" aria-label="Send email to Máximo Batista"><i class="far fa-envelope" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/maxbatistar/" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl xl-desktop:text-3xl mr-0 tablet:mr-5 laptop:mr-5 desktop:mr-5 xl-desktop:mr-6 inline-block tablet:block laptop:block desktop:block xl-desktop:block mt-0 tablet:mt-4 laptop:mt-4 desktop:mt-4 xl-desktop:mt-6 p-2 tablet:p-0 laptop:p-0 desktop:p-0 border border-white/30 tablet:border-none laptop:border-none desktop:border-none rounded-full tablet:rounded-none laptop:rounded-none desktop:rounded-none w-11 h-11 tablet:w-auto tablet:h-auto laptop:w-auto laptop:h-auto desktop:w-auto desktop:h-auto flex tablet:inline laptop:inline desktop:inline items-center justify-center transition-all duration-300 hover:bg-white/10 tablet:hover:bg-transparent laptop:hover:bg-transparent desktop:hover:bg-transparent hover:-translate-y-0.5 tablet:hover:translate-y-0 laptop:hover:translate-y-0 desktop:hover:scale-110 desktop:hover:-translate-y-1" aria-label="Máximo Batista's Instagram profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/maximo-batista-2954b1226/" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl xl-desktop:text-3xl p-2 tablet:p-0 laptop:p-0 desktop:p-0 border border-white/30 tablet:border-none laptop:border-none desktop:border-none rounded-full tablet:rounded-none laptop:rounded-none desktop:rounded-none w-11 h-11 tablet:w-auto tablet:h-auto laptop:w-auto laptop:h-auto desktop:w-auto desktop:h-auto flex items-center justify-center transition-all duration-300 hover:bg-white/10 tablet:hover:bg-transparent laptop:hover:bg-transparent desktop:hover:bg-transparent hover:-translate-y-0.5 tablet:hover:translate-y-0 laptop:hover:translate-y-0 desktop:hover:scale-110 desktop:hover:-translate-y-1" aria-label="Máximo Batista's LinkedIn profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="mailto:maximo.bxxiv@hotmail.com" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl xl-desktop:text-3xl p-2 tablet:p-0 laptop:p-0 desktop:p-0 border border-white/30 tablet:border-none laptop:border-none desktop:border-none rounded-full tablet:rounded-none laptop:rounded-none desktop:rounded-none w-11 h-11 tablet:w-auto tablet:h-auto laptop:w-auto laptop:h-auto desktop:w-auto desktop:h-auto flex items-center justify-center transition-all duration-300 hover:bg-white/10 tablet:hover:bg-transparent laptop:hover:bg-transparent desktop:hover:bg-transparent hover:-translate-y-0.5 tablet:hover:translate-y-0 laptop:hover:translate-y-0 desktop:hover:scale-110 desktop:hover:-translate-y-1" aria-label="Send email to Máximo Batista"><i class="far fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/maxbatistar/" class="text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl xl-desktop:text-3xl p-2 tablet:p-0 laptop:p-0 desktop:p-0 border border-white/30 tablet:border-none laptop:border-none desktop:border-none rounded-full tablet:rounded-none laptop:rounded-none desktop:rounded-none w-11 h-11 tablet:w-auto tablet:h-auto laptop:w-auto laptop:h-auto desktop:w-auto desktop:h-auto flex items-center justify-center transition-all duration-300 hover:bg-white/10 tablet:hover:bg-transparent laptop:hover:bg-transparent desktop:hover:bg-transparent hover:-translate-y-0.5 tablet:hover:translate-y-0 laptop:hover:translate-y-0 desktop:hover:scale-110 desktop:hover:-translate-y-1" aria-label="Máximo Batista's Instagram profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -181,6 +353,6 @@
         <p>UI/UX Designer & Visual Artist</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

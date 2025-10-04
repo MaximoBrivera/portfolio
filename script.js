@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     heroPicture.style.objectPosition = 'center center';
                 }
+                // Force a reflow to ensure the change is applied
+                heroPicture.offsetHeight;
             }
             
             // También resetear cualquier transform del contenido
@@ -32,8 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ejecutar inicialización solo una vez al cargar
     initializeHeroPosition();
 
-    // Mouse parallax function
+    // Mouse parallax function - Only for desktop
     function applyMouseParallax(e) {
+        // Only apply parallax on desktop (1280px and above)
+        if (window.innerWidth < 1280) {
+            return;
+        }
+        
         // Obtener las dimensiones del hero section
         const rect = heroSection.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -76,8 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-80px + ${limitedMoveY}px)`;
             } else if (window.innerWidth >= 1280) {
                 heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-50px + ${limitedMoveY}px)`;
-            } else {
-                heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(50% + ${ultraSafeMoveY}px)`;
             }
         }
         
@@ -90,8 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Reset parallax when mouse leaves hero
+    // Reset parallax when mouse leaves hero - Only for desktop
     function resetParallax() {
+        // Only reset parallax on desktop (1280px and above)
+        if (window.innerWidth < 1280) {
+            return;
+        }
+        
         // Return to original position based on screen size
         const heroPicture = heroSection.querySelector('picture img');
         if (heroPicture) {
@@ -99,8 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 heroPicture.style.objectPosition = 'center -80px';
             } else if (window.innerWidth >= 1280) {
                 heroPicture.style.objectPosition = 'center -50px';
-            } else {
-                heroPicture.style.objectPosition = 'center center';
             }
         }
         
@@ -113,6 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add mouse event listeners
     heroSection.addEventListener('mousemove', applyMouseParallax);
     heroSection.addEventListener('mouseleave', resetParallax);
+    
+    // Add resize listener to reinitialize on window resize
+    window.addEventListener('resize', function() {
+        initializeHeroPosition();
+    });
 
     // Navigation with improved scroll-snap and mobile centering
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
@@ -202,10 +215,20 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const header = document.querySelector('.main-header');
     
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            
+            // Toggle header and body background when menu is open
+            if (navLinks.classList.contains('active')) {
+                header.classList.add('menu-open');
+                document.body.classList.add('menu-open');
+            } else {
+                header.classList.remove('menu-open');
+                document.body.classList.remove('menu-open');
+            }
             
             // Toggle hamburger to X
             const icon = mobileMenuToggle.querySelector('i');
@@ -222,6 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                header.classList.remove('menu-open');
+                document.body.classList.remove('menu-open');
                 const icon = mobileMenuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
@@ -232,6 +257,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', (e) => {
             if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
                 navLinks.classList.remove('active');
+                header.classList.remove('menu-open');
+                document.body.classList.remove('menu-open');
                 const icon = mobileMenuToggle.querySelector('i');
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
