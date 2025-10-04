@@ -5,21 +5,21 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
     <url>
-        <loc>https://maximobrivera.github.io/portfolio/</loc>
+        <loc>https://mrbanika.github.io/portfolio/</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     
     <url>
-        <loc>https://maximobrivera.github.io/portfolio/#about</loc>
+        <loc>https://mrbanika.github.io/portfolio/#about</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://maximobrivera.github.io/portfolio/#work</loc>
+        <loc>https://mrbanika.github.io/portfolio/#work</loc>
         <lastmod>2024-12-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>

@@ -13,7 +13,7 @@ A modern, responsive portfolio website showcasing the work of Máximo Batista (M
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://maximobrivera.github.io/portfolio](https://maximobrivera.github.io/portfolio)
+Visit the live portfolio: [https://mrbanika.github.io/portfolio](https://mrbanika.github.io/portfolio)
 
 ## 🛠️ Technologies Used
 
@@ -61,7 +61,7 @@ portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/MaximoBrivera/portfolio.git
+   git clone https://github.com/MrBanika/portfolio.git
    cd portfolio
    ```
 
