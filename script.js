@@ -8,14 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Inicializar la imagen centrada al cargar la página (solo una vez)
     function initializeHeroPosition() {
         if (heroSection) {
-            // Solo establecer la posición inicial, sin interferir con el parallax
-            // Set initial position based on screen size
-            if (window.innerWidth >= 1920) {
-                heroSection.style.backgroundPosition = 'center -80px';
-            } else if (window.innerWidth >= 1280) {
-                heroSection.style.backgroundPosition = 'center -50px';
-            } else {
-                heroSection.style.backgroundPosition = 'center center';
+            // Set initial position for the picture element
+            const heroPicture = heroSection.querySelector('picture img');
+            if (heroPicture) {
+                if (window.innerWidth >= 1920) {
+                    heroPicture.style.objectPosition = 'center -80px';
+                } else if (window.innerWidth >= 1280) {
+                    heroPicture.style.objectPosition = 'center -50px';
+                } else {
+                    heroPicture.style.objectPosition = 'center center';
+                }
             }
             
             // También resetear cualquier transform del contenido
@@ -64,16 +66,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const ultraSafeMoveX = Math.max(-8, Math.min(8, safeMoveX));
         const ultraSafeMoveY = Math.max(-12, Math.min(12, safeMoveY));
         
-        // Apply mouse movement using calc()
+        // Apply mouse movement to the picture element
         // Apply parallax based on screen size with limited upward movement
         const limitedMoveY = ultraSafeMoveY > 0 ? ultraSafeMoveY : ultraSafeMoveY * 0.3; // Reduce upward movement
         
-        if (window.innerWidth >= 1920) {
-            heroSection.style.backgroundPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-80px + ${limitedMoveY}px)`;
-        } else if (window.innerWidth >= 1280) {
-            heroSection.style.backgroundPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-50px + ${limitedMoveY}px)`;
-        } else {
-            heroSection.style.backgroundPosition = `calc(50% + ${ultraSafeMoveX}px) calc(50% + ${ultraSafeMoveY}px)`;
+        const heroPicture = heroSection.querySelector('picture img');
+        if (heroPicture) {
+            if (window.innerWidth >= 1920) {
+                heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-80px + ${limitedMoveY}px)`;
+            } else if (window.innerWidth >= 1280) {
+                heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-50px + ${limitedMoveY}px)`;
+            } else {
+                heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(50% + ${ultraSafeMoveY}px)`;
+            }
         }
         
         // Apply slight movement to content
@@ -88,12 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset parallax when mouse leaves hero
     function resetParallax() {
         // Return to original position based on screen size
-        if (window.innerWidth >= 1920) {
-            heroSection.style.backgroundPosition = 'center -80px';
-        } else if (window.innerWidth >= 1280) {
-            heroSection.style.backgroundPosition = 'center -50px';
-        } else {
-            heroSection.style.backgroundPosition = 'center center';
+        const heroPicture = heroSection.querySelector('picture img');
+        if (heroPicture) {
+            if (window.innerWidth >= 1920) {
+                heroPicture.style.objectPosition = 'center -80px';
+            } else if (window.innerWidth >= 1280) {
+                heroPicture.style.objectPosition = 'center -50px';
+            } else {
+                heroPicture.style.objectPosition = 'center center';
+            }
         }
         
         const heroContent = heroSection.querySelector('.hero-content');
