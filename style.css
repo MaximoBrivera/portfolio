@@ -1,0 +1,480 @@
+/* ======================================================= */
+/* 1. VARIABLES Y ESTILOS GLOBALES */
+/* ======================================================= */
+:root {
+    --dark-bg: #000000;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+}
+
+/* Móvil: Scroll-snap muy flexible para acceso completo al footer */
+@media (max-width: 1023px) {
+    html {
+        scroll-snap-type: none; /* Desactivar scroll-snap en mobile */
+    }
+    
+    /* En móvil, remover snap de todas las secciones */
+    .hero-section, .about-section, .work-section {
+        scroll-snap-align: none;
+        scroll-snap-stop: auto;
+    }
+}
+
+/* Scroll snap más estricto en desktop pero permitiendo acceso al footer */
+@media (min-width: 1024px) {
+    html {
+        scroll-snap-type: y proximity;
+    }
+    
+    /* Solo las secciones principales tienen snap mandatory */
+    .hero-section, .about-section, .work-section {
+        scroll-snap-type: y mandatory;
+    }
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* ======================================================= */
+/* 2. ENCABEZADO Y NAVEGACIÓN */
+/* ======================================================= */
+.main-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+/* Mobile: Header transparent by default */
+@media (max-width: 767px) {
+    .main-header {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .main-header.scrolled {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+    }
+}
+
+/* Mobile menu toggle - hidden by default, shown on mobile via Tailwind */
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* ======================================================= */
+/* 3. SECCIÓN HERO - HÍBRIDA (Desktop simple, Mobile Tailwind) */
+/* ======================================================= */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.05);
+    will-change: background-position;
+    transform: translateZ(0);
+    transition: background-position 0.15s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 0;
+    scroll-snap-align: start;
+    min-height: 100vh;
+}
+
+/* Background image styles for WebP support */
+.hero-section picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-section picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Desktop: Simple style like other project */
+@media (min-width: 1280px) {
+    .hero-section {
+        background-attachment: fixed;
+        background-position: center -50px;
+        background-size: 320%;
+    }
+    
+    .hero-content h1 {
+        font-size: 35px !important;
+        margin-bottom: 30px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+        opacity: 0.95 !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .social-links a {
+        font-size: 1.6em !important;
+        margin-right: 20px !important;
+        display: block !important;
+        margin-top: 15px !important;
+        padding: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        border-radius: 50% !important;
+        width: 50px !important;
+        height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease !important;
+        backdrop-filter: blur(2px) !important;
+        background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .social-links a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        transform: translateY(-2px) !important;
+    }
+}
+
+/* Ultra-wide desktop (1920px+) - Optimized for large screens */
+@media (min-width: 1920px) {
+    .hero-section {
+        background-size: 280%;
+        background-position: center -80px;
+    }
+}
+
+/* Tablet and below: Use Tailwind classes */
+@media (max-width: 1279px) {
+    .hero-section {
+        background-attachment: scroll;
+        background-position: center 15%;
+    }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 767px) {
+    .hero-section {
+        background-position: center 20%;
+        background-size: 400%;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 20px 250px;
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Ensure hero content is visible on mobile */
+    .hero-content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 400px 0 150px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 30px !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+        color: white !important;
+    }
+    
+    /* Make social links more visible on mobile */
+    .social-links {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
+    }
+    
+    .social-links a {
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 2px solid rgba(255, 255, 255, 0.3) !important;
+        width: 50px !important;
+        height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .social-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        transform: translateY(-2px) !important;
+        border-color: rgba(255, 255, 255, 0.6) !important;
+    }
+    
+    /* Additional mobile improvements */
+    .hero-content h1 {
+        text-align: center !important;
+        width: 100% !important;
+        padding: 0 10px !important;
+    }
+    
+    /* Ensure proper spacing on very small screens */
+    @media (max-width: 480px) {
+        .hero-content {
+            padding: 350px 0 120px !important;
+        }
+        
+        .hero-content h1 {
+            font-size: 1.8rem !important;
+            line-height: 1.3 !important;
+        }
+        
+        .social-links {
+            gap: 15px !important;
+        }
+        
+        .social-links a {
+            width: 45px !important;
+            height: 45px !important;
+        }
+    }
+}
+
+/* ======================================================= */
+/* 4. SECCIONES ABOUT Y WORK - Mantener Tailwind */
+/* ======================================================= */
+
+/* Scroll snap para todas las secciones principales */
+.about-section, .work-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* En móvil, las secciones son más flexibles y mejor centradas */
+@media (max-width: 1023px) {
+    .about-section, .work-section {
+        min-height: auto;
+        padding-bottom: 50px;
+        scroll-margin-top: 80px;
+    }
+    
+    /* Ajustes específicos para cada sección en móvil */
+    .about-section {
+        scroll-margin-top: 70px;
+    }
+    
+    .work-section {
+        scroll-margin-top: 90px;
+    }
+}
+
+/* La sección Work permite scroll más libre hacia el footer */
+.work-section {
+    scroll-snap-stop: normal;
+}
+
+/* Footer sin scroll snap para permitir acceso completo */
+footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 150px;
+    scroll-snap-align: none;
+    scroll-snap-stop: never;
+}
+
+/* Solo override específicos para desktop si es necesario */
+@media (min-width: 1280px) {
+    .about-section, .work-section {
+        padding: 80px 10% !important;
+        text-align: center !important;
+        background: transparent !important;
+        border: none !important;
+        backdrop-filter: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .about-section h2, .work-section h2 {
+        font-size: 2em !important;
+        margin-bottom: 20px !important;
+        text-transform: uppercase !important;
+        position: relative !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 600 !important;
+    }
+    
+    .about-subtitle {
+        font-size: 1.1em !important;
+        font-weight: 400 !important;
+        color: var(--text-color) !important;
+        margin-bottom: 50px !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+    
+    .work-section h2::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        margin: 10px auto 0;
+    }
+    
+    .about-content {
+        max-width: 800px !important;
+        margin: 0 auto 40px !important;
+        text-align: left !important;
+    }
+    
+    .about-content p {
+        margin-bottom: 20px !important;
+        font-size: 18px !important;
+        line-height: 1.7 !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 300 !important;
+    }
+    
+    .skills-list {
+        margin-top: 40px !important;
+        text-align: center !important;
+        background: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    .skills-list span {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 1em !important;
+        color: var(--text-color) !important;
+        background: transparent !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    .projects-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px !important;
+        max-width: 1000px !important;
+        margin: 0 auto !important;
+    }
+    
+    .project-card {
+        background-color: #1a1a1a !important;
+        padding: 20px !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        cursor: pointer !important;
+        transition: transform 0.3s, box-shadow 0.3s !important;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px) !important;
+        scale: 1 !important;
+    }
+    
+    .project-card img {
+        width: 100% !important;
+        height: 300px !important;
+        object-fit: cover !important;
+        object-position: center top !important;
+        display: block !important;
+        border-radius: 5px !important;
+        margin-bottom: 15px !important;
+        aspect-ratio: 16/10 !important;
+    }
+    
+    .project-title {
+        font-weight: 600 !important;
+        font-size: 1.1em !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+}
+
+
+/* Footer específico para móviles - Completamente accesible */
+@media (max-width: 1023px) {
+    footer {
+        padding: 120px 0; /* Más padding para mejor acceso táctil */
+        margin-top: 80px;
+        scroll-snap-align: none !important;
+        scroll-snap-stop: never !important;
+    }
+}
+
+/* Footer para móviles pequeños */
+@media (max-width: 767px) {
+    footer {
+        padding: 100px 20px;
+        margin-top: 80px;
+    }
+    
+    footer p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9em;
+}
+
+
+/* ======================================================= */
+/* 5. MOBILE MENU - Solo para móvil */
+/* ======================================================= */
+@media (max-width: 767px) {
+    .mobile-menu-toggle {
+        display: block !important;
+        background: none !important;
+        border: none !important;
+        color: white !important;
+        font-size: 1.5em !important;
+        cursor: pointer !important;
+    }
+    
+    .nav-links.active {
+        left: 0 !important;
+    }
+    
+    /* Ensure logo is visible on mobile */
+    .logo {
+        color: white !important;
+        font-weight: 600 !important;
+        font-size: 1.5rem !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+        z-index: 1001 !important;
+        position: relative !important;
+    }
+    
+}

@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mrbanika.com/sitemap.xml
+
+# Disallow crawling of specific files/directories (if any)
+Disallow: /private/
+Disallow: *.log
+Disallow: /temp/
+
+# Allow crawling of CSS and JS files for better SEO
+Allow: /style.css
+Allow: /script.js
+Allow: /Img/
+
+# Crawl-delay (optional, in seconds)
+Crawl-delay: 1
+
