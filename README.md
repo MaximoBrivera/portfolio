@@ -47,10 +47,11 @@ portfolio/
 ├── index.html          # Main HTML file
 ├── style.css           # Custom CSS styles
 ├── script.js           # JavaScript functionality
-├── Img/                # Images directory
-│   ├── q2.jpg         # Hero background image
-│   ├── web.png        # Project image 1
-│   └── web11.png      # Project image 2
+├── assets/             # Assets directory (images, etc.)
+│   ├── q2.webp        # Hero background image (WebP)
+│   ├── q2.jpg         # Hero background image (fallback)
+│   ├── web.webp       # Project image 1 (WebP)
+│   └── web11.webp     # Project image 2 (WebP)
 ├── robots.txt          # SEO robots file
 ├── sitemap.xml         # SEO sitemap
 └── README.md           # Project documentation
