@@ -285,13 +285,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     function initTypewriterAnimation() {
-        // Only apply on desktop (1280px and above)
-        if (window.innerWidth < 1280) return;
-
         const titleElement = document.getElementById('title-text');
         if (!titleElement) return;
 
         const textToType = "Web & UI Designer · Visual Artist";
+
+        // For mobile/tablet: show static text without animation
+        if (window.innerWidth < 1280) {
+            titleElement.textContent = textToType;
+            return;
+        }
 
         function startTypingAnimation() {
 
@@ -478,11 +481,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize typewriter animation
     let typewriterController = initTypewriterAnimation();
 
-    // Re-initialize on window resize (only if switching to desktop)
+    // Re-initialize on window resize
     window.addEventListener('resize', () => {
+        const titleElement = document.getElementById('title-text');
+        if (!titleElement) return;
+
         if (window.innerWidth >= 1280) {
-            const titleElement = document.getElementById('title-text');
-            if (titleElement && !titleElement.hasAttribute('data-typed')) {
+            // Switch to desktop: start typewriter animation
+            if (!titleElement.hasAttribute('data-typed')) {
                 titleElement.setAttribute('data-typed', 'true');
                 if (typewriterController) {
                     typewriterController.stop();
@@ -490,11 +496,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 typewriterController = initTypewriterAnimation();
             }
         } else {
-            // Stop animation on mobile/tablet
+            // Switch to mobile/tablet: show static text
             if (typewriterController) {
                 typewriterController.stop();
                 typewriterController = null;
             }
+            titleElement.textContent = "Web & UI Designer · Visual Artist";
+            titleElement.removeAttribute('data-typed');
         }
     });
 });
