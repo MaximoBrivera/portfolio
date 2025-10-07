@@ -29,35 +29,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply mouse parallax effect (desktop only)
     function applyMouseParallax(e) {
         if (window.innerWidth < 1280) return;
-        
+
         const rect = heroSection.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
         const mouseX = e.clientX - centerX;
         const mouseY = e.clientY - centerY;
-        
+
         const moveX = mouseX * mouseParallaxFactor;
         const moveY = mouseY * mouseParallaxFactor;
-        
+
         // Movement limits
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
         const maxMoveX = screenWidth >= 1280 ? 8 : 3;
         const maxMoveY = screenHeight >= 800 ? 12 : 5;
-        
+
         const limitedMoveX = Math.max(-maxMoveX, Math.min(maxMoveX, moveX));
         const baseLimitedMoveY = Math.max(-maxMoveY, Math.min(maxMoveY, moveY));
-        
+
         // Safety verification
         const safeMoveX = Math.max(-10, Math.min(10, limitedMoveX));
         const safeMoveY = Math.max(-15, Math.min(15, baseLimitedMoveY));
         const ultraSafeMoveX = Math.max(-8, Math.min(8, safeMoveX));
         const ultraSafeMoveY = Math.max(-12, Math.min(12, safeMoveY));
-        
+
         // Apply movement to picture element
         const limitedMoveY = ultraSafeMoveY > 0 ? ultraSafeMoveY : ultraSafeMoveY * 0.3;
         const heroPicture = heroSection.querySelector('picture img');
-        
+
         if (heroPicture) {
             if (window.innerWidth >= 1920) {
                 heroPicture.style.objectPosition = `calc(50% + ${ultraSafeMoveX}px) calc(-80px + ${limitedMoveY}px)`;
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reset parallax when mouse leaves hero (desktop only)
     function resetParallax() {
         if (window.innerWidth < 1280) return;
-        
+
         const heroPicture = heroSection.querySelector('picture img');
         if (heroPicture) {
             if (window.innerWidth >= 1920) {
@@ -95,13 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const isMobile = window.innerWidth <= 1023;
-                
+
                 if (isMobile) {
                     // Close mobile menu if open
                     const navLinks = document.querySelector('.nav-links');
@@ -116,12 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         }
                     }
-                    
+
                     // Mobile: Precise centering with header offset
                     const headerHeight = document.querySelector('.main-header').offsetHeight || 70;
                     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                     let offsetPosition;
-                    
+
                     // Section-specific adjustment for better centering
                     if (targetId === '#about') {
                         offsetPosition = elementPosition - headerHeight - 10;
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         offsetPosition = elementPosition - headerHeight - 20;
                     }
-                    
+
                     setTimeout(() => {
                         window.scrollTo({
                             top: offsetPosition,
@@ -177,19 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector('.nav-links');
     const header = document.querySelector('.main-header');
     const icon = mobileMenuToggle?.querySelector('i');
-    
+
     console.log('Mobile menu elements found:', {
         mobileMenuToggle: !!mobileMenuToggle,
         navLinks: !!navLinks,
         header: !!header,
         icon: !!icon
     });
-    
+
     if (!mobileMenuToggle || !navLinks || !header) {
         console.error('Mobile menu elements not found!');
         return;
     }
-    
+
     const toggleMenu = (isOpen) => {
         console.log('toggleMenu called with isOpen:', isOpen);
         navLinks.classList.toggle('active', isOpen);
@@ -200,11 +200,11 @@ document.addEventListener('DOMContentLoaded', () => {
             headerMenuOpen: header.classList.contains('menu-open'),
             bodyMenuOpen: document.body.classList.contains('menu-open')
         });
-        
+
         if (icon) {
             icon.className = '';
             icon.innerHTML = '';
-            
+
             if (isOpen) {
                 icon.className = 'fas fa-times';
                 console.log('Menu opened - showing X icon');
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Menu toggled:', isOpen ? 'X' : 'Hamburger (3 horizontal lines)', 'Class:', icon.className);
         }
     };
-    
+
     // Event listeners
     mobileMenuToggle.addEventListener('click', (e) => {
         e.preventDefault();
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Currently open:', isCurrentlyOpen);
         toggleMenu(!isCurrentlyOpen);
     });
-    
+
     // Close menu when clicking on navigation links
     const navLinksItems = navLinks.querySelectorAll('a');
     navLinksItems.forEach(link => {
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    
+
     // Close menu on outside click
     document.addEventListener('click', (e) => {
         if (!mobileMenuToggle.contains(e.target) && !navLinks.contains(e.target)) {
@@ -256,19 +256,19 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Simple hover effects - no complex click logic
     const projectCards = document.querySelectorAll('.project-card');
-    
+
     projectCards.forEach(card => {
         // Add hover class on mouseenter
         card.addEventListener('mouseenter', () => {
             card.classList.add('hover');
         });
-        
+
         // Remove hover class on mouseleave
         card.addEventListener('mouseleave', () => {
             card.classList.remove('hover');
         });
     });
-    
+
     console.log('Project card hover effects initialized');
 });
 
@@ -283,18 +283,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleElement = document.getElementById('title-text');
         if (!titleElement) return;
 
-        const textToType = "UI/UX Designer & Visual Artist";
+        const textToType = "Web & UI Designer · Visual Artist";
         let animationInterval;
-        
+
         function startTypingAnimation() {
             // Clear any existing interval
             if (animationInterval) {
                 clearInterval(animationInterval);
             }
-            
+
             // Clear the text initially but show cursor immediately
             titleElement.innerHTML = '<span class="typewriter-text"></span><span class="typewriter-cursor">|</span>';
-            
+
             // Add CSS for blinking cursor animation
             if (!document.getElementById('typewriter-cursor-style')) {
                 const style = document.createElement('style');
@@ -319,38 +319,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
                 document.head.appendChild(style);
             }
-            
+
             // Get references to text and cursor elements
             const textElement = titleElement.querySelector('.typewriter-text');
             const cursorElement = titleElement.querySelector('.typewriter-cursor');
-            
+
             // Cursor control functions
             function startBlinking() {
                 cursorElement.style.animation = 'blink 1s infinite';
                 console.log('Cursor started blinking');
             }
-            
+
             function stopBlinking() {
                 cursorElement.style.animation = 'none';
                 console.log('Cursor stopped blinking');
             }
-            
+
             // Start blinking immediately
             startBlinking();
-            
+
             let index = 0;
             const baseTypingSpeed = 120;
             const displayDuration = 8000;
-            
+
             function typeCharacter() {
                 if (index < textToType.length) {
                     // Stop blinking while actively typing
                     stopBlinking();
                     const currentChar = textToType.charAt(index);
-                    
+
                     // Variable typing speed for more realistic effect
                     let currentSpeed = baseTypingSpeed;
-                    
+
                     // Speed variations based on character type
                     if (currentChar === ' ') {
                         currentSpeed = baseTypingSpeed * 2.5; // Thinking pause
@@ -361,25 +361,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         currentSpeed = baseTypingSpeed; // Normal speed
                     }
-                    
+
                     // Add realistic randomness
                     const randomVariation = Math.random() * 40 - 20;
                     currentSpeed += randomVariation;
-                    
+
                     // Occasional longer pauses (human hesitation)
                     if (Math.random() < 0.15) {
                         currentSpeed += Math.random() * 200 + 100;
                     }
-                    
+
                     // Update text only (cursor stays separate)
                     textElement.textContent = textToType.substring(0, index + 1);
                     index++;
-                    
+
                     // Extra pause after certain characters
                     if (currentChar === '&') {
                         currentSpeed += 150;
                     }
-                    
+
                     // Blink cursor during long pauses
                     if (currentSpeed > 200) {
                         startBlinking();
@@ -396,45 +396,45 @@ document.addEventListener('DOMContentLoaded', () => {
                     startCountdownToRestart();
                 }
             }
-            
+
             function startCountdownToRestart() {
                 setTimeout(() => {
                     eraseText();
                 }, displayDuration);
             }
-            
+
             function eraseText() {
                 let currentText = textElement.textContent;
                 const baseErasingSpeed = 60;
-                
+
                 function eraseCharacter() {
                     if (currentText.length > 0) {
                         // Stop blinking while actively erasing
                         stopBlinking();
                         currentText = currentText.slice(0, -1);
-                        
+
                         // Variable erasing speed
                         let currentSpeed = baseErasingSpeed;
-                        
+
                         if (currentText.length > 0 && currentText.charAt(currentText.length - 1) === ' ') {
                             currentSpeed = baseErasingSpeed * 1.5;
-                        } else if (currentText.length > 0 && (currentText.charAt(currentText.length - 1) === '&' || 
+                        } else if (currentText.length > 0 && (currentText.charAt(currentText.length - 1) === '&' ||
                                  currentText.charAt(currentText.length - 1) === '/')) {
                             currentSpeed = baseErasingSpeed * 1.3;
                         }
-                        
+
                         // Add realistic randomness
                         const randomVariation = Math.random() * 30 - 15;
                         currentSpeed += randomVariation;
-                        
+
                         // Occasional hesitation while erasing
                         if (Math.random() < 0.1) {
                             currentSpeed += Math.random() * 100 + 50;
                         }
-                        
+
                         // Update text only (cursor stays separate)
                         textElement.textContent = currentText;
-                        
+
                         // Blink cursor during long pauses
                         if (currentSpeed > 120) {
                             startBlinking();
@@ -454,18 +454,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         }, 5000);
                     }
                 }
-                
+
                 // Small delay before starting to erase
                 setTimeout(eraseCharacter, 200);
             }
-            
+
             // Start typing animation immediately
             typeCharacter();
         }
-        
+
         // Start the animation cycle
         startTypingAnimation();
-        
+
         // Return controller for cleanup
         return {
             stop: () => {
@@ -475,10 +475,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
-    
+
     // Initialize typewriter animation
     let typewriterController = initTypewriterAnimation();
-    
+
     // Re-initialize on window resize (only if switching to desktop)
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 1280) {
