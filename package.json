@@ -1,0 +1,38 @@
+{
+    "name": "mrbanika-portfolio",
+    "version": "1.0.0",
+    "description": "Professional portfolio website for Máximo Batista (MrBanika) - UI/UX Designer & Visual Artist",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx live-server --port=3000 --open=/index.html",
+        "build": "echo 'Build process completed'",
+        "dev": "npx live-server --port=3000 --open=/index.html --watch=src"
+    },
+    "keywords": [
+        "portfolio",
+        "ui-ux",
+        "designer",
+        "visual-artist",
+        "web-development",
+        "responsive-design"
+    ],
+    "author": {
+        "name": "Máximo Batista",
+        "email": "maximo.bxxiv@hotmail.com",
+        "url": "https://github.com/mrbanika"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mrbanika/portfolio.git"
+    },
+    "homepage": "https://mrbanika.github.io/portfolio",
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}
