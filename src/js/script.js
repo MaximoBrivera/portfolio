@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Apply mouse parallax effect (desktop only)
     function applyMouseParallax(e) {
-        if (window.innerWidth < 1280) return;
+        if (window.innerWidth < 1280 || !heroSection) return;
 
         const rect = heroSection.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset parallax when mouse leaves hero (desktop only)
     function resetParallax() {
-        if (window.innerWidth < 1280) return;
+        if (window.innerWidth < 1280 || !heroSection) return;
 
         const heroPicture = heroSection.querySelector('picture img');
         if (heroPicture) {
@@ -83,8 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize and add event listeners
     initializeHeroPosition();
-    heroSection.addEventListener('mousemove', applyMouseParallax);
-    heroSection.addEventListener('mouseleave', resetParallax);
+    if (heroSection) {
+        heroSection.addEventListener('mousemove', applyMouseParallax);
+        heroSection.addEventListener('mouseleave', resetParallax);
+    }
     window.addEventListener('resize', initializeHeroPosition);
 });
 
@@ -92,7 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // 2. SMOOTH NAVIGATION
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    if (navLinks.length === 0) return;
+
+    navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -155,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.main-header');
+    if (!header) return;
+
     const scrollThreshold = 50;
 
     function handleScroll() {
@@ -176,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const header = document.querySelector('.main-header');
-    const icon = mobileMenuToggle?.querySelector('i');
+    const icon = mobileMenuToggle ? mobileMenuToggle.querySelector('i') : null;
 
     console.log('Mobile menu elements found:', {
         mobileMenuToggle: !!mobileMenuToggle,
@@ -256,6 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Simple hover effects - no complex click logic
     const projectCards = document.querySelectorAll('.project-card');
+    if (projectCards.length === 0) return;
 
     projectCards.forEach(card => {
         // Add hover class on mouseenter
@@ -284,13 +292,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!titleElement) return;
 
         const textToType = "Web & UI Designer · Visual Artist";
-        let animationInterval;
 
         function startTypingAnimation() {
-            // Clear any existing interval
-            if (animationInterval) {
-                clearInterval(animationInterval);
-            }
 
             // Clear the text initially but show cursor immediately
             titleElement.innerHTML = '<span class="typewriter-text"></span><span class="typewriter-cursor">|</span>';
@@ -467,9 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Return controller for cleanup
         return {
             stop: () => {
-                if (animationInterval) {
-                    clearInterval(animationInterval);
-                }
+                // Animation will stop naturally when page is unloaded
             }
         };
     }
