@@ -256,3 +256,4 @@ refactor: code refactoring
 ---
 
 *This configuration guide should be updated as the project evolves and new configurations are added.*
+
