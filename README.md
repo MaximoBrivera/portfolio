@@ -1,6 +1,6 @@
 # MrBanika Portfolio
 
-Professional portfolio website for Máximo Batista (MrBanika) - UI/UX Designer & Visual Artist.
+Professional portfolio website for Máximo Batista (MrBanika) - Web & UI Designer · Visual Artist.
 
 ## 🎨 About
 
