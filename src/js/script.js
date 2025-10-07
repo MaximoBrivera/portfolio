@@ -327,12 +327,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Cursor control functions
             function startBlinking() {
                 cursorElement.style.animation = 'blink 1s infinite';
-                console.log('Cursor started blinking');
             }
 
             function stopBlinking() {
                 cursorElement.style.animation = 'none';
-                console.log('Cursor stopped blinking');
             }
 
             // Start blinking immediately
