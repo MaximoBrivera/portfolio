@@ -300,3 +300,54 @@ body {
 
 /* Custom margins */
 .-left-full { left: -100%; }
+
+/* Mobile Menu Styles */
+.nav-links {
+  transition: all 0.3s ease;
+}
+
+.nav-links.active {
+  left: 0 !important;
+  transform: translateX(0) !important;
+}
+
+.main-header.menu-open {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+.main-header.menu-open .mobile-menu-toggle {
+  color: #ffffff !important;
+}
+
+.main-header.menu-open .logo {
+  color: #ffffff !important;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Mobile menu animations */
+.nav-links.active li {
+  animation: slideInFromLeft 0.3s ease forwards;
+}
+
+.nav-links.active li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nav-links.active li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
