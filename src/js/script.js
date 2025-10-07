@@ -326,17 +326,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Cursor control functions
             function startBlinking() {
-                if (cursorElement && !cursorElement.classList.contains('blinking')) {
-                    cursorElement.style.animation = 'blink 1s infinite';
-                    cursorElement.classList.add('blinking');
-                }
+                cursorElement.style.animation = 'blink 1s infinite';
+                console.log('Cursor started blinking');
             }
 
             function stopBlinking() {
-                if (cursorElement && cursorElement.classList.contains('blinking')) {
-                    cursorElement.style.animation = 'none';
-                    cursorElement.classList.remove('blinking');
-                }
+                cursorElement.style.animation = 'none';
+                console.log('Cursor stopped blinking');
             }
 
             // Start blinking immediately
