@@ -136,19 +136,54 @@ document.addEventListener('DOMContentLoaded', () => {
                         offsetPosition = elementPosition - headerHeight - 20;
                     }
 
-                    setTimeout(() => {
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }, 100);
+                    // Optimized smooth scroll for mobile/tablet
+                    const startTime = performance.now();
+                    const startPosition = window.pageYOffset;
+                    const distance = offsetPosition - startPosition;
+                    const duration = 400; // Reduced from default smooth scroll
+
+                    function animateScroll(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+
+                        // Optimized easing function for faster, smoother animation
+                        const ease = progress < 0.5
+                            ? 2 * progress * progress
+                            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                        window.scrollTo(0, startPosition + distance * ease);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                        }
+                    }
+
+                    requestAnimationFrame(animateScroll);
                 } else {
-                    // Desktop: Use scrollIntoView with scroll-snap
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start',
-                        inline: 'nearest'
-                    });
+                    // Desktop: Optimized smooth scroll with scroll-snap
+                    const startTime = performance.now();
+                    const startPosition = window.pageYOffset;
+                    const targetPosition = targetElement.offsetTop - 80;
+                    const distance = targetPosition - startPosition;
+                    const duration = 300; // Faster for desktop
+
+                    function animateScroll(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+
+                        // Smooth easing for desktop
+                        const ease = progress < 0.5
+                            ? 2 * progress * progress
+                            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+                        window.scrollTo(0, startPosition + distance * ease);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(animateScroll);
+                        }
+                    }
+
+                    requestAnimationFrame(animateScroll);
                 }
             }
         });
@@ -185,12 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.main-header');
     const icon = mobileMenuToggle ? mobileMenuToggle.querySelector('i') : null;
 
-    console.log('Mobile menu elements found:', {
-        mobileMenuToggle: !!mobileMenuToggle,
-        navLinks: !!navLinks,
-        header: !!header,
-        icon: !!icon
-    });
+    // Mobile menu elements initialized
 
     if (!mobileMenuToggle || !navLinks || !header) {
         console.error('Mobile menu elements not found!');
@@ -198,15 +228,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const toggleMenu = (isOpen) => {
-        console.log('toggleMenu called with isOpen:', isOpen);
         navLinks.classList.toggle('active', isOpen);
         header.classList.toggle('menu-open', isOpen);
         document.body.classList.toggle('menu-open', isOpen);
-        console.log('Classes after toggle:', {
-            navLinksActive: navLinks.classList.contains('active'),
-            headerMenuOpen: header.classList.contains('menu-open'),
-            bodyMenuOpen: document.body.classList.contains('menu-open')
-        });
 
         if (icon) {
             icon.className = '';
@@ -214,17 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (isOpen) {
                 icon.className = 'fas fa-times';
-                console.log('Menu opened - showing X icon');
             } else {
                 icon.className = 'fas fa-bars';
                 icon.style.transform = 'rotate(0deg) scale(1)';
                 setTimeout(() => {
                     icon.className = 'fas fa-bars';
                     icon.style.transform = 'rotate(0deg) scale(1)';
-                    console.log('Menu closed - forced hamburger icon to be horizontal');
                 }, 50);
             }
-            console.log('Menu toggled:', isOpen ? 'X' : 'Hamburger (3 horizontal lines)', 'Class:', icon.className);
         }
     };
 
@@ -232,9 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuToggle.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Mobile menu toggle clicked!');
         const isCurrentlyOpen = navLinks.classList.contains('active');
-        console.log('Currently open:', isCurrentlyOpen);
         toggleMenu(!isCurrentlyOpen);
     });
 
@@ -277,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    console.log('Project card hover effects initialized');
+    // Project card hover effects initialized
 });
 
 // ========================================
@@ -503,6 +522,124 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             titleElement.textContent = "Web & UI Designer · Visual Artist";
             titleElement.removeAttribute('data-typed');
+        }
+    });
+});
+
+// ========================================
+// 7. SCROLL ANIMATIONS (PERFORMANCE OPTIMIZED)
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Performance-optimized scroll animations using Intersection Observer
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for scroll animations
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => observer.observe(el));
+});
+
+// ========================================
+// 8. PERFORMANCE-OPTIMIZED HOVER EFFECTS
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Optimize hover effects for better performance
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach(card => {
+        // Use passive event listeners for better performance
+        card.addEventListener('mouseenter', () => {
+            card.style.willChange = 'transform';
+            card.classList.add('hover');
+        }, { passive: true });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.willChange = 'auto';
+            card.classList.remove('hover');
+        }, { passive: true });
+    });
+});
+
+// ========================================
+// 9. SMOOTH SCROLLING OPTIMIZATION
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Optimize smooth scrolling with requestAnimationFrame
+    let isScrolling = false;
+
+    function smoothScrollTo(target, duration = 500) {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        const start = window.pageYOffset;
+        const distance = target - start;
+        const startTime = performance.now();
+
+        function animation(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+
+            // Optimized easing function for faster, smoother animation
+            const ease = progress < 0.5
+                ? 2 * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            window.scrollTo(0, start + distance * ease);
+
+            if (progress < 1) {
+                requestAnimationFrame(animation);
+            } else {
+                isScrolling = false;
+            }
+        }
+
+        requestAnimationFrame(animation);
+    }
+
+    // Apply to navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop - 80;
+                smoothScrollTo(targetPosition);
+            }
+        });
+    });
+});
+
+// ========================================
+// 10. IMAGE LOADING ANIMATIONS
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Add loading animation to images
+    const images = document.querySelectorAll('img');
+
+    images.forEach(img => {
+        img.classList.add('image-loading');
+
+        img.addEventListener('load', () => {
+            img.classList.remove('image-loading');
+            img.classList.add('image-loaded');
+        });
+
+        // If image is already loaded
+        if (img.complete) {
+            img.classList.remove('image-loading');
+            img.classList.add('image-loaded');
         }
     });
 });

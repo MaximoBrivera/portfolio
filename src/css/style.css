@@ -85,7 +85,7 @@ a {
     background-color: transparent !important;
     -webkit-backdrop-filter: none !important;
     backdrop-filter: none !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   .main-header.scrolled {
@@ -95,9 +95,7 @@ a {
   }
 }
 
-.mobile-menu-toggle {
-  display: none;
-}
+/* Mobile menu toggle styles handled by Tailwind */
 
 /* ======================================================= */
 /* 4. HERO SECTION */
@@ -164,7 +162,7 @@ a {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     -webkit-backdrop-filter: blur(2px) !important;
     backdrop-filter: blur(2px) !important;
     background-color: rgba(0, 0, 0, 0.1) !important;
@@ -243,7 +241,7 @@ a {
     align-items: center !important;
     justify-content: center !important;
     border-radius: 50% !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   .social-links a:hover {
@@ -289,6 +287,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 50%, #000000 100%);
+}
+
+.about-section > *,
+.work-section > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 1023px) {
@@ -446,19 +452,16 @@ a {
     background-color: inherit !important;
   }
 
-  .coderhouse-overlay,
-  .style-overlay {
+  .coderhouse-overlay {
     background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)) !important;
   }
 
-  .coderhouse-overlay a,
-  .style-overlay div {
+  .coderhouse-overlay a {
     background-color: #374151 !important;
     border-color: rgba(255, 255, 255, 0.2) !important;
   }
 
-  .coderhouse-overlay a:hover,
-  .style-overlay div:hover {
+  .coderhouse-overlay a:hover {
     background-color: #4b5563 !important;
     border-color: rgba(255, 255, 255, 0.3) !important;
   }
@@ -563,21 +566,15 @@ article.project-card,
 
   /* Overlay Visibility */
   .projects-grid .project-card.hover .coderhouse-overlay,
-  .projects-grid .project-card.hover .style-overlay,
   .projects-grid article.project-card.hover .coderhouse-overlay,
-  .projects-grid article.project-card.hover .style-overlay,
-  .project-card.hover .coderhouse-overlay,
-  .project-card.hover .style-overlay {
+  .project-card.hover .coderhouse-overlay {
     opacity: 1 !important;
     pointer-events: auto !important;
   }
 
   .projects-grid .project-card.active .coderhouse-overlay,
-  .projects-grid .project-card.active .style-overlay,
   .projects-grid article.project-card.active .coderhouse-overlay,
-  .projects-grid article.project-card.active .style-overlay,
-  .project-card.active .coderhouse-overlay,
-  .project-card.active .style-overlay {
+  .project-card.active .coderhouse-overlay {
     opacity: 1 !important;
     pointer-events: auto !important;
   }
@@ -592,13 +589,11 @@ article.project-card,
   }
 
   /* Hover Overlay Effects */
-  .coderhouse-overlay,
-  .style-overlay {
+  .coderhouse-overlay {
     transition: opacity 0.3s ease;
   }
 
-  .project-card:hover .coderhouse-overlay,
-  .project-card:hover .style-overlay {
+  .project-card:hover .coderhouse-overlay {
     opacity: 1;
     pointer-events: auto;
   }
@@ -655,8 +650,7 @@ article.project-card,
 
   /* Mobile & Tablet: Show overlay when clicked */
   @media (max-width: 1279px) {
-    .project-card.clicked .coderhouse-overlay,
-    .project-card.clicked .style-overlay {
+    .project-card.clicked .coderhouse-overlay {
       opacity: 1 !important;
       pointer-events: auto !important;
     }
@@ -766,21 +760,6 @@ article.project-card,
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.style-overlay {
-  z-index: 20;
-  will-change: opacity;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-.style-overlay div {
-  will-change: transform;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 /* Prevent Glitches */
 .project-card.group .relative {
   transform: translateZ(0);
@@ -830,14 +809,12 @@ article.project-card,
 
 /* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
-  .coderhouse-overlay,
-  .style-overlay {
+  .coderhouse-overlay {
     opacity: 0.8;
     pointer-events: auto;
   }
 
-  .coderhouse-overlay a,
-  .style-overlay div {
+  .coderhouse-overlay a {
     transform: translateY(0);
   }
 }
@@ -863,6 +840,69 @@ article.project-card,
     opacity: 1 !important;
     visibility: visible !important;
     transform: scale(1.05) !important;
+  }
+
+  /* ======================================== */
+  /* PERFORMANCE-OPTIMIZED ANIMATIONS */
+  /* ======================================== */
+
+  /* GPU-accelerated animations for better performance */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+  }
+
+  .animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Optimized hover effects with GPU acceleration */
+  .project-card {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  .project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Smooth loading animation for images */
+  .image-loading {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .image-loaded {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Optimized button animations */
+  .btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-animated::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .btn-animated:hover::before {
+    left: 100%;
   }
 
   /* Enhanced mobile menu animation */
@@ -983,7 +1023,7 @@ article.project-card,
     text-decoration: none !important;
     display: block !important;
     padding: 1rem 1.5rem !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
     overflow: hidden !important;
     text-align: center !important;
@@ -1018,7 +1058,7 @@ article.project-card,
     margin: 0.5rem 1rem !important;
     border-radius: 8px !important;
     background-color: rgba(255, 255, 255, 0.02) !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
   .nav-links li:hover {
