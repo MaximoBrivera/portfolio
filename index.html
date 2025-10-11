@@ -55,18 +55,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preload" href="src/assets/images/q2.webp" as="image" type="image/webp">
         <link rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
             as="style">
 
         <!-- ======================================== -->
         <!-- FONTS -->
         <!-- ======================================== -->
         <link rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
             as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
                 rel="stylesheet">
         </noscript>
 
@@ -329,11 +329,11 @@
         "isAccessibleForFree": true,
         "keywords": "web design, ui design, ux design, visual design, portfolio"
     }
-    </script>
+        </script>
 
     </head>
 
-    <body class="bg-black text-white font-inter leading-relaxed min-h-screen text-sm md:text-base scroll-smooth snap-y snap-proximity">
+    <body class="bg-black text-white font-inter leading-relaxed min-h-screen text-sm md:text-base scroll-smooth">
         <!-- ======================================== -->
         <!-- HEADER -->
         <!-- ======================================== -->
@@ -353,15 +353,20 @@
 
                 <ul
                     class="fixed desktop:static top-[60px] desktop:top-auto -left-full desktop:left-auto w-full desktop:w-auto h-[calc(100vh-60px)] desktop:h-auto bg-black/95 desktop:bg-transparent backdrop-blur-lg desktop:backdrop-blur-none flex-col desktop:flex-row justify-start desktop:justify-center items-center desktop:items-center pt-12 desktop:pt-0 transition-all duration-300 list-none flex ml-auto nav-links">
-                    <li class="my-5 desktop:my-0 desktop:ml-8 xl-desktop:ml-12">
+                    <li class="my-5 desktop:my-0 desktop:ml-12 xl-desktop:ml-16">
+                        <a href="#about"
+                            class="text-white text-lg desktop:text-xl xl-desktop:text-2xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
+                            aria-label="Learn more about me">About</a>
+                    </li>
+                    <li class="my-5 desktop:my-0 desktop:ml-12 xl-desktop:ml-16">
                         <a href="#work"
-                            class="text-white text-lg desktop:text-lg xl-desktop:text-xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
+                            class="text-white text-lg desktop:text-xl xl-desktop:text-2xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
                             aria-label="View work and projects">Work</a>
                     </li>
-                    <li class="my-5 desktop:my-0 desktop:ml-8 xl-desktop:ml-12">
-                        <a href="#about"
-                            class="text-white text-lg desktop:text-lg xl-desktop:text-xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
-                            aria-label="Learn more about me">About</a>
+                    <li class="my-5 desktop:my-0 desktop:ml-12 xl-desktop:ml-16">
+                        <a href="#visual-art"
+                            class="text-white text-lg desktop:text-xl xl-desktop:text-2xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
+                            aria-label="View visual art and design work">Visual Art</a>
                     </li>
                 </ul>
             </nav>
@@ -378,7 +383,7 @@
                 class="relative h-screen flex items-center justify-center tablet:justify-start overflow-hidden p-0 shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.1)] hero-section snap-start"
                 role="banner" style="background-position: center 60%;">
                 <!-- Background Image -->
-                <picture class="absolute inset-0 w-full h-full">
+                <picture class="absolute inset-0 w-full h-full hero-background">
                     <source media="(max-width: 768px)" srcset="src/assets/images/q2-mobile.webp" type="image/webp">
                     <source srcset="src/assets/images/q2.webp" type="image/webp">
                     <img src="src/assets/images/q2.webp" alt="Máximo Batista MrBanika - Web UI Designer Visual Artist Portfolio Hero Background"
@@ -390,26 +395,30 @@
                 <div
                     class="px-5 tablet:px-10 desktop:px-16 xl-desktop:px-20 pb-12 tablet:pb-20 desktop:pb-32 xl-desktop:pb-40 pl-5 tablet:pl-20 desktop:pl-20 xl-desktop:pl-24 z-[2] absolute mr-0 tablet:mr-auto desktop:mr-auto max-w-full tablet:max-w-[60%] desktop:max-w-[45%] xl-desktop:max-w-[40%] text-center tablet:text-left desktop:text-left flex flex-col justify-center items-center tablet:items-start desktop:items-start hero-content">
                     <h1
-                        class="text-3xl tablet:text-4xl desktop:text-4xl xl-desktop:text-5xl mb-5 tablet:mb-6 desktop:mb-6 xl-desktop:mb-8 font-poppins font-semibold leading-tight desktop:leading-[1.1] xl-desktop:leading-[1.05]">
-                        <span class="title-text" id="title-text">Web & UI Designer · Visual Artist</span>
+                        class="text-3xl tablet:text-4xl desktop:text-4xl xl-desktop:text-5xl mb-2 tablet:mb-3 desktop:mb-3 xl-desktop:mb-4 font-space-grotesk font-semibold leading-tight desktop:leading-[1.1] xl-desktop:leading-[1.05]">
+                        <span class="title-text" id="title-text">Digital Product Designer</span>
                     </h1>
+                    <h2
+                        class="text-lg tablet:text-xl desktop:text-2xl xl-desktop:text-3xl mb-5 tablet:mb-6 desktop:mb-6 xl-desktop:mb-8 font-space-grotesk font-light leading-relaxed desktop:leading-relaxed xl-desktop:leading-relaxed text-white/90">
+                        Crafting intuitive digital experiences
+                    </h2>
                 </div>
 
                 <!-- Desktop Social Links (Right Side) -->
                 <div class="hidden desktop:flex xl-desktop:flex fixed right-20 xl-desktop:right-20 top-1/2 transform -translate-y-1/2 z-[3] flex-col gap-5 social-links-right"
                     role="navigation" aria-label="Social media links">
                     <a href="https://www.linkedin.com/in/maximo-batista-2954b1226/"
-                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg"
+                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg social-btn linkedin"
                         aria-label="Máximo Batista's LinkedIn profile" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                     </a>
                     <a href="mailto:maximo.bxxiv@hotmail.com"
-                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg"
+                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg social-btn email"
                         aria-label="Send email to Máximo Batista">
                         <i class="far fa-envelope" aria-hidden="true"></i>
                     </a>
                     <a href="https://www.instagram.com/maxbatistar/"
-                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg"
+                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg social-btn instagram"
                         aria-label="Máximo Batista's Instagram profile" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
@@ -436,18 +445,19 @@
                 </div>
             </section>
 
+
             <!-- ======================================== -->
             <!-- ABOUT SECTION -->
             <!-- ======================================== -->
             <section id="about"
-                class="py-10 tablet:py-20 desktop:py-32 xl-desktop:py-40 px-5 tablet:px-[8%] desktop:px-[15%] xl-desktop:px-[18%] pb-10 tablet:pb-20 desktop:pb-[300px] xl-desktop:pb-[350px] text-center mx-4 tablet:mx-6 desktop:mx-0 mt-10 tablet:mt-0 desktop:mt-0 mb-20 tablet:mb-24 desktop:mb-0 bg-white/[0.02] tablet:bg-white/[0.01] desktop:bg-transparent rounded-2xl tablet:rounded-3xl desktop:rounded-none border border-white/10 tablet:border-white/8 desktop:border-none backdrop-blur-lg tablet:backdrop-blur-xl desktop:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.3)] tablet:shadow-[0_12px_40px_rgba(0,0,0,0.4)] desktop:shadow-none transition-all duration-300 hover:bg-white/[0.03] tablet:hover:bg-white/[0.02] desktop:hover:bg-transparent hover:border-white/15 tablet:hover:border-white/12 desktop:hover:border-none hover:-translate-y-0.5 tablet:hover:-translate-y-1 desktop:hover:translate-y-0 about-section snap-start"
+                class="py-10 tablet:py-20 desktop:py-32 xl-desktop:py-40 px-5 tablet:px-[8%] desktop:px-[15%] xl-desktop:px-[18%] pb-10 tablet:pb-20 desktop:pb-[300px] xl-desktop:pb-[350px] text-center mx-4 tablet:mx-6 desktop:mx-0 mt-10 tablet:mt-0 desktop:mt-0 mb-32 tablet:mb-40 desktop:mb-0 bg-white/[0.02] tablet:bg-white/[0.01] desktop:bg-transparent rounded-2xl tablet:rounded-3xl desktop:rounded-none border border-white/10 tablet:border-white/8 desktop:border-none backdrop-blur-lg tablet:backdrop-blur-xl desktop:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.3)] tablet:shadow-[0_12px_40px_rgba(0,0,0,0.4)] desktop:shadow-none transition-all duration-300 hover:bg-white/[0.03] tablet:hover:bg-white/[0.02] desktop:hover:bg-transparent hover:border-white/15 tablet:hover:border-white/12 desktop:hover:border-none hover:-translate-y-0.5 tablet:hover:-translate-y-1 desktop:hover:translate-y-0 about-section"
                 role="main">
                 <h2
-                    class="text-xl tablet:text-3xl desktop:text-5xl xl-desktop:text-6xl mb-4 tablet:mb-6 desktop:mb-8 xl-desktop:mb-10 uppercase relative font-inter font-semibold animate-on-scroll">
+                    class="text-xl tablet:text-3xl desktop:text-5xl xl-desktop:text-6xl mb-4 tablet:mb-6 desktop:mb-8 xl-desktop:mb-10 uppercase relative font-space-grotesk font-semibold animate-on-scroll">
                     About</h2>
                 <h3
                     class="text-base tablet:text-xl desktop:text-2xl xl-desktop:text-3xl font-normal text-white mb-8 tablet:mb-10 desktop:mb-16 xl-desktop:mb-20 font-inter leading-snug about-subtitle animate-on-scroll">
-                    Web & UI Design • Graphic Design • Visual Storytelling</h3>
+                    Digital Product Design • UI/UX • Visual Art • Web Development</h3>
 
                 <!-- Profile Photo for Mobile/Tablet (Above Text) -->
                 <div class="desktop:hidden mb-6 flex justify-center">
@@ -470,28 +480,24 @@
                             <div class="text-content">
                                 <p
                                     class="mb-4 tablet:mb-5 desktop:mb-6 xl-desktop:mb-8 text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light about-intro">
-                                    Hi, I'm Maximo Batista—but you can call me MrBanika.</p>
+                                    Hi, I'm Maximo Batista (MrBanika), a Digital Product Designer & Visual Artist focused on crafting digital experiences where functionality meets emotional impact.</p>
                                 <p
                                     class="mb-4 tablet:mb-5 desktop:mb-6 xl-desktop:mb-8 text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light about-text">
-                                            I'm a Web & UI Designer passionate about creating bold, clean, and digital experiences that
-                                    solve user problems and deliver business results.</p>
+                                    My approach blends product thinking with visual storytelling—transforming complex user needs into intuitive, visually compelling interfaces. With expertise in UI/UX, web development, and a background in IT support, I bridge the gap between technical feasibility and human-centered design.</p>
                                 <p
                                     class="mb-4 tablet:mb-5 desktop:mb-6 xl-desktop:mb-8 text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light about-text">
-                                    With a strong focus on visual storytelling, I transform concepts into designs that connect
-                                    emotionally and stand out. My work blends minimalism with impactful details, always aiming to
-                                    deliver clarity, usability, and style.</p>
+                                    My work as a visual artist fuels my design process, bringing a unique sensitivity to composition, color, and narrative that makes digital products not just usable—but memorable.</p>
                                 <p
                                     class="mb-4 tablet:mb-5 desktop:mb-6 xl-desktop:mb-8 text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light about-text">
-                                    When I'm not designing, I'm exploring music, experimenting with visuals, and building ideas that
-                                    push creativity further.</p>
-                            </div>
+                                    When I'm not designing, I'm creating digital art, exploring music, and experimenting with visual concepts that keep my creative practice evolving.</p>
+                </div>
 
                             <div class="mt-8 tablet:mt-10 desktop:mt-0 xl-desktop:mt-0 text-center desktop:text-left skills-list"
-                                role="complementary" aria-label="Technical skills">
-                                <span
+                    role="complementary" aria-label="Technical skills">
+                    <span
                                     class="font-inter font-normal text-sm tablet:text-base desktop:text-xl xl-desktop:text-2xl block p-2 tablet:p-3 desktop:p-2 bg-white/5 tablet:bg-white/8 desktop:bg-white/5 rounded tablet:rounded-lg desktop:rounded-lg"
                                     style="color: #aaa !important;">Figma
-                                    | Illustrator | Photoshop | Prototyping</span>
+                                    | Illustrator | Photoshop | HTML/CSS | JavaScript | Prototyping</span>
                             </div>
                         </div>
                     </div>
@@ -517,17 +523,20 @@
             <!-- WORK SECTION -->
             <!-- ======================================== -->
             <section id="work"
-                class="py-10 tablet:py-20 desktop:pt-6 xl-desktop:pt-8 desktop:pb-32 xl-desktop:pb-40 px-5 tablet:px-[8%] desktop:px-[15%] xl-desktop:px-[18%] pb-15 tablet:pb-20 desktop:pb-[300px] xl-desktop:pb-[350px] text-center mx-4 tablet:mx-6 desktop:mx-0 mt-16 tablet:mt-20 desktop:mt-0 mb-15 tablet:mb-0 desktop:mb-0 bg-white/[0.02] tablet:bg-white/[0.01] desktop:bg-transparent rounded-2xl tablet:rounded-3xl desktop:rounded-none border border-white/10 tablet:border-white/8 desktop:border-none backdrop-blur-lg tablet:backdrop-blur-xl desktop:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.3)] tablet:shadow-[0_12px_40px_rgba(0,0,0,0.4)] desktop:shadow-none transition-all duration-300 hover:bg-white/[0.03] tablet:hover:bg-white/[0.02] desktop:hover:bg-transparent hover:border-white/15 tablet:hover:border-white/12 desktop:hover:border-none hover:-translate-y-0.5 tablet:hover:-translate-y-1 desktop:hover:translate-y-0 work-section snap-start"
+                class="py-10 tablet:py-20 desktop:py-32 xl-desktop:py-40 px-5 tablet:px-[8%] desktop:px-[15%] xl-desktop:px-[18%] pb-10 tablet:pb-20 desktop:pb-[300px] xl-desktop:pb-[350px] text-center mx-4 tablet:mx-6 desktop:mx-0 mt-10 tablet:mt-0 desktop:mt-0 mb-32 tablet:mb-40 desktop:mb-0 bg-white/[0.02] tablet:bg-white/[0.01] desktop:bg-transparent rounded-2xl tablet:rounded-3xl desktop:rounded-none border border-white/10 tablet:border-white/8 desktop:border-none backdrop-blur-lg tablet:backdrop-blur-xl desktop:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.3)] tablet:shadow-[0_12px_40px_rgba(0,0,0,0.4)] desktop:shadow-none transition-all duration-300 hover:bg-white/[0.03] tablet:hover:bg-white/[0.02] desktop:hover:bg-transparent hover:border-white/15 tablet:hover:border-white/12 desktop:hover:border-none hover:-translate-y-0.5 tablet:hover:-translate-y-1 desktop:hover:translate-y-0 work-section"
                 role="main">
                 <h2
-                    class="text-xl tablet:text-3xl desktop:text-5xl xl-desktop:text-6xl mb-4 tablet:mb-6 desktop:mb-8 xl-desktop:mb-10 uppercase relative font-inter font-semibold after:content-[''] after:block after:w-12 desktop:after:w-16 xl-desktop:after:w-20 after:h-0.5 desktop:after:h-1 after:mx-auto after:mt-2 desktop:after:mt-4 animate-on-scroll">
+                    class="text-2xl tablet:text-3xl desktop:text-4xl xl-desktop:text-5xl font-space-grotesk font-semibold mb-4 tablet:mb-6 desktop:mb-8 xl-desktop:mb-10 text-white">
                     Work</h2>
+                <p
+                    class="text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl text-gray-300 mb-8 tablet:mb-10 desktop:mb-12 xl-desktop:mb-16 max-w-3xl mx-auto leading-relaxed font-inter">
+                    A collection of my digital design projects including web applications, mobile interfaces, and user experience solutions.</p>
 
-                <div class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-2 xl-desktop:grid-cols-2 gap-8 tablet:gap-6 desktop:gap-12 xl-desktop:gap-16 max-w-5xl desktop:max-w-6xl xl-desktop:max-w-7xl mx-auto mt-10 tablet:mt-8 desktop:mt-12 xl-desktop:mt-16 projects-grid"
+                <div class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 xl-desktop:grid-cols-3 gap-6 tablet:gap-6 desktop:gap-8 xl-desktop:gap-10 max-w-7xl desktop:max-w-8xl xl-desktop:max-w-9xl mx-auto mt-10 tablet:mt-8 desktop:mt-12 xl-desktop:mt-16 visual-art-grid"
                     role="region" aria-label="Featured projects">
                     <!-- Project 1: CoderHouse -->
                     <article
-                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl project-card group">
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
                         <div
                             class="relative overflow-hidden rounded-lg tablet:rounded-lg laptop:rounded desktop:rounded-xl xl-desktop:rounded-2xl">
                             <picture class="block">
@@ -540,9 +549,9 @@
                                     class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-top block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
                             </picture>
 
-                            <!-- Hover Overlay for CoderHouse project -->
+                            <!-- Hover Overlay -->
                             <div
-                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl coderhouse-overlay pointer-events-none group-hover:pointer-events-auto">
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
                                 <a href="https://mrbanika.github.io/CoderHouse/index.html"
                                     class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
                                     target="_blank" rel="noopener noreferrer">
@@ -558,16 +567,16 @@
                             </div>
                         </div>
                         <h3
-                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-inter mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 project-title">
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
                             Website Project | CoderHouse</h3>
                         <p
-                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light project-description">
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
                             Educational platform design focused on user experience and intuitive interface.</p>
                     </article>
 
                     <!-- Project 2: Style Fashion -->
                     <article
-                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl project-card group">
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
                         <div
                             class="relative overflow-hidden rounded-lg tablet:rounded-lg laptop:rounded desktop:rounded-xl xl-desktop:rounded-2xl">
                             <picture class="block">
@@ -580,9 +589,9 @@
                                     class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-top block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
                             </picture>
 
-                            <!-- Hover Overlay for Style Fashion project -->
+                            <!-- Hover Overlay -->
                             <div
-                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl coderhouse-overlay pointer-events-none group-hover:pointer-events-auto">
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
                                 <a href="javascript:void(0)"
                                     class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
                                     style="cursor: default;"
@@ -599,12 +608,385 @@
                             </div>
                         </div>
                         <h3
-                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-inter mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 project-title">
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
                             Website Project | Style</h3>
                         <p
-                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light project-description">
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
                             Modern e-commerce with responsive design and optimized shopping experience.</p>
                     </article>
+
+                    <!-- Project 3: Mobile App Design -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group third-project-card">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg laptop:rounded desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/images/q2-mobile.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/images/q2.webp" type="image/webp">
+                                <img src="src/assets/images/q2.webp"
+                                    alt="Mobile App Design Project - Modern UI UX Interface Design for iOS Android by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    style="cursor: default;"
+                                    onclick="return false;">
+                                    <i class="fas fa-clock text-sm"></i>
+                                    Coming Soon
+                                </a>
+                                <a href="https://www.figma.com/design/CtHIa13H8GWdNsoGn2iy2x/CoderHouse?node-id=0-1&t=dYZQA17KDUJQoUBN-1"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-20"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-figma text-sm"></i>
+                                    View Design
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Mobile App | Design</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Innovative mobile interface design with focus on user experience and modern aesthetics.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ======================================== -->
+            <!-- VISUAL ART SECTION -->
+            <!-- ======================================== -->
+            <section id="visual-art"
+                class="py-10 tablet:py-20 desktop:py-32 xl-desktop:py-40 px-5 tablet:px-[8%] desktop:px-[15%] xl-desktop:px-[18%] pb-10 tablet:pb-20 desktop:pb-[300px] xl-desktop:pb-[350px] text-center mx-4 tablet:mx-6 desktop:mx-0 mt-10 tablet:mt-0 desktop:mt-0 mb-32 tablet:mb-40 desktop:mb-0 bg-white/[0.02] tablet:bg-white/[0.01] desktop:bg-transparent rounded-2xl tablet:rounded-3xl desktop:rounded-none border border-white/10 tablet:border-white/8 desktop:border-none backdrop-blur-lg tablet:backdrop-blur-xl desktop:backdrop-blur-none shadow-[0_8px_32px_rgba(0,0,0,0.3)] tablet:shadow-[0_12px_40px_rgba(0,0,0,0.4)] desktop:shadow-none transition-all duration-300 hover:bg-white/[0.03] tablet:hover:bg-white/[0.02] desktop:hover:bg-transparent hover:border-white/15 tablet:hover:border-white/12 desktop:hover:border-none hover:-translate-y-0.5 tablet:hover:-translate-y-1 desktop:hover:translate-y-0 visual-art-section"
+                role="main">
+                <h2
+                    class="text-2xl tablet:text-3xl desktop:text-4xl xl-desktop:text-5xl font-space-grotesk font-semibold mb-4 tablet:mb-6 desktop:mb-8 xl-desktop:mb-10 text-white">
+                    Visual Art</h2>
+                <p
+                    class="text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl text-gray-300 mb-8 tablet:mb-10 desktop:mb-12 xl-desktop:mb-16 max-w-3xl mx-auto leading-relaxed font-inter">
+                    A collection of my visual design work including cover arts, brochures, branding, and digital illustrations.</p>
+
+                <!-- Cover Arts Grid -->
+                <div class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 xl-desktop:grid-cols-3 gap-6 tablet:gap-6 desktop:gap-8 xl-desktop:gap-10 max-w-7xl desktop:max-w-8xl xl-desktop:max-w-9xl mx-auto mt-10 tablet:mt-8 desktop:mt-12 xl-desktop:mt-16 visual-art-grid"
+                    role="region" aria-label="Cover art projects">
+
+                    <!-- Cover Art 1 -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/Covers/Bones.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/Covers/Bones.webp" type="image/webp">
+                                <img src="src/assets/Covers/Bones.webp"
+                                    alt="Cover Art 1 - Bones Album Cover by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    onclick="openImageModal('src/assets/Covers/Bones.webp', 'Bones Album Cover by MrBanika')">
+                                    <i class="fas fa-eye text-sm"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Bones</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Dark and atmospheric album cover design with striking visual elements and bold typography.</p>
+                    </article>
+
+                    <!-- Cover Art 2 -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/Covers/Briar.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/Covers/Briar.webp" type="image/webp">
+                                <img src="src/assets/Covers/Briar.webp"
+                                    alt="Cover Art 2 - Briar Album Cover by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    onclick="openImageModal('src/assets/Covers/Briar.webp', 'Briar Album Cover by MrBanika')">
+                                    <i class="fas fa-eye text-sm"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Briar</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Elegant and sophisticated album cover with intricate details and refined typography.</p>
+                    </article>
+
+                    <!-- Cover Art 3 -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/Covers/Chains.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/Covers/Chains.webp" type="image/webp">
+                                <img src="src/assets/Covers/Chains.webp"
+                                    alt="Cover Art 3 - Chains Album Cover by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    onclick="openImageModal('src/assets/Covers/Chains.webp', 'Chains Album Cover by MrBanika')">
+                                    <i class="fas fa-eye text-sm"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Chains</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Powerful and symbolic album cover with industrial elements and strong visual impact.</p>
+                    </article>
+
+                    <!-- Cover Art 4 -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/Covers/DevilTwins.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/Covers/DevilTwins.webp" type="image/webp">
+                                <img src="src/assets/Covers/DevilTwins.webp"
+                                    alt="Cover Art 4 - Devil Twins Album Cover by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    onclick="openImageModal('src/assets/Covers/DevilTwins.webp', 'Devil Twins Album Cover by MrBanika')">
+                                    <i class="fas fa-eye text-sm"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Devil Twins</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Dark and mysterious album cover with dual character design and gothic elements.</p>
+                    </article>
+
+                    <!-- Cover Art 5 -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/Covers/Queen.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/Covers/Queen.webp" type="image/webp">
+                                <img src="src/assets/Covers/Queen.webp"
+                                    alt="Cover Art 5 - Queen Album Cover by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    onclick="openImageModal('src/assets/Covers/Queen.webp', 'Queen Album Cover by MrBanika')">
+                                    <i class="fas fa-eye text-sm"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Queen</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Regal and majestic album cover with royal aesthetics and elegant design elements.</p>
+                    </article>
+
+                    <!-- Cover Art 6 -->
+                    <article
+                        class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                        <div
+                            class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                            <picture class="block">
+                                <source media="(max-width: 768px)" srcset="src/assets/Covers/SalariMan.webp"
+                                    type="image/webp">
+                                <source srcset="src/assets/Covers/SalariMan.webp" type="image/webp">
+                                <img src="src/assets/Covers/SalariMan.webp"
+                                    alt="Cover Art 6 - Salaryman Album Cover by MrBanika"
+                                    loading="lazy" width="400" height="300"
+                                    class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                            </picture>
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                <a href="javascript:void(0)"
+                                    class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                    onclick="openImageModal('src/assets/Covers/SalariMan.webp', 'Salaryman Album Cover by MrBanika')">
+                                    <i class="fas fa-eye text-sm"></i>
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        <h3
+                            class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                            Salaryman</h3>
+                        <p
+                            class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                            Corporate and professional album cover with business aesthetics and modern design elements.</p>
+                    </article>
+                </div>
+
+                <!-- Brochures Section -->
+                <div class="mt-16 tablet:mt-20 desktop:mt-24 xl-desktop:mt-32 brochures-section">
+                    <h3 class="text-xl tablet:text-2xl desktop:text-3xl xl-desktop:text-4xl font-space-grotesk font-semibold mb-6 tablet:mb-8 desktop:mb-10 xl-desktop:mb-12 text-white text-center">
+                        Brochures</h3>
+                    <p class="text-sm tablet:text-base desktop:text-lg xl-desktop:text-xl text-gray-300 mb-8 tablet:mb-10 desktop:mb-12 xl-desktop:mb-16 max-w-2xl mx-auto leading-relaxed font-inter text-center">
+                        Professional marketing materials and corporate brochures designed for various clients and industries.</p>
+
+                    <!-- Brochures Grid -->
+                    <div class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 xl-desktop:grid-cols-3 gap-6 tablet:gap-6 desktop:gap-8 xl-desktop:gap-10 max-w-6xl desktop:max-w-7xl xl-desktop:max-w-8xl mx-auto brochures-grid"
+                        role="region" aria-label="Brochure projects">
+
+                        <!-- Brochure 1 -->
+                        <article
+                            class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                            <div
+                                class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                                <picture class="block">
+                                    <source media="(max-width: 768px)" srcset="src/assets/images/q2-mobile.webp"
+                                        type="image/webp">
+                                    <source srcset="src/assets/images/q2.webp" type="image/webp">
+                                    <img src="src/assets/images/q2.webp"
+                                        alt="Brochure 1 - Corporate Marketing Material by MrBanika"
+                                        loading="lazy" width="400" height="300"
+                                        class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                                </picture>
+                                <!-- Hover Overlay -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                    <a href="javascript:void(0)"
+                                        class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                        style="cursor: default;"
+                                        onclick="return false;">
+                                        <i class="fas fa-eye text-sm"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                                Brochure 1</h3>
+                            <p
+                                class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                                Corporate brochure with clean layout and professional visual hierarchy.</p>
+                        </article>
+
+                        <!-- Brochure 2 -->
+                        <article
+                            class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                            <div
+                                class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                                <picture class="block">
+                                    <source media="(max-width: 768px)" srcset="src/assets/images/q2-mobile.webp"
+                                        type="image/webp">
+                                    <source srcset="src/assets/images/q2.webp" type="image/webp">
+                                    <img src="src/assets/images/q2.webp"
+                                        alt="Brochure 2 - Product Marketing Brochure by MrBanika"
+                                        loading="lazy" width="400" height="300"
+                                        class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                                </picture>
+                                <!-- Hover Overlay -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                    <a href="javascript:void(0)"
+                                        class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                        style="cursor: default;"
+                                        onclick="return false;">
+                                        <i class="fas fa-eye text-sm"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                                Brochure 2</h3>
+                            <p
+                                class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                                Product marketing brochure with compelling visuals and clear messaging.</p>
+                        </article>
+
+                        <!-- Brochure 3 -->
+                        <article
+                            class="bg-gray-900 p-5 tablet:p-6 desktop:p-8 xl-desktop:p-10 rounded-lg tablet:rounded-lg desktop:rounded-2xl xl-desktop:rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 tablet:hover:-translate-y-1 desktop:hover:-translate-y-2 hover:scale-105 tablet:hover:scale-105 desktop:hover:scale-105 xl-desktop:hover:scale-[1.02] hover:bg-gray-800 tablet:hover:bg-gray-800 desktop:hover:bg-gray-800 xl-desktop:hover:bg-gray-800 hover:shadow-xl tablet:hover:shadow-xl desktop:hover:shadow-2xl xl-desktop:hover:shadow-2xl visual-art-card group">
+                            <div
+                                class="relative overflow-hidden rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl">
+                                <picture class="block">
+                                    <source media="(max-width: 768px)" srcset="src/assets/images/q2-mobile.webp"
+                                        type="image/webp">
+                                    <source srcset="src/assets/images/q2.webp" type="image/webp">
+                                    <img src="src/assets/images/q2.webp"
+                                        alt="Brochure 3 - Event Marketing Brochure by MrBanika"
+                                        loading="lazy" width="400" height="300"
+                                        class="w-full h-[200px] tablet:h-60 desktop:h-80 xl-desktop:h-96 object-cover object-center block rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl mb-3 tablet:mb-4 desktop:mb-6 xl-desktop:mb-8 transition-transform duration-300 group-hover:scale-105">
+                                </picture>
+                                <!-- Hover Overlay -->
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-br from-black/70 to-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center gap-4 rounded-lg tablet:rounded-lg desktop:rounded-xl xl-desktop:rounded-2xl visual-art-overlay pointer-events-none group-hover:pointer-events-auto">
+                                    <a href="javascript:void(0)"
+                                        class="bg-gray-700 backdrop-blur-sm text-white px-6 py-3 rounded-xl font-semibold text-sm tablet:text-base hover:bg-gray-600 hover:scale-105 transition-all duration-200 flex items-center gap-2 shadow-lg transform translate-y-2 group-hover:translate-y-0 btn-animated relative z-10"
+                                        style="cursor: default;"
+                                        onclick="return false;">
+                                        <i class="fas fa-eye text-sm"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="font-semibold text-base tablet:text-lg desktop:text-2xl xl-desktop:text-3xl font-space-grotesk mb-2 tablet:mb-3 desktop:mb-4 xl-desktop:mb-6 visual-art-title">
+                                Brochure 3</h3>
+                            <p
+                                class="text-xs tablet:text-sm desktop:text-base xl-desktop:text-lg text-gray-300 leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light visual-art-description">
+                                Event marketing brochure with dynamic design and engaging content layout.</p>
+                        </article>
+                    </div>
                 </div>
             </section>
         </main>
@@ -620,9 +1002,14 @@
         <!-- ======================================== -->
         <!-- SCRIPTS -->
         <!-- ======================================== -->
-        <script>
-            // Portfolio initialization
-        </script>
+        <!-- Image Modal -->
+        <div id="imageModal" class="image-modal">
+            <div class="image-modal-content">
+                <span class="image-modal-close">&times;</span>
+                <img id="modalImage" src="" alt="">
+            </div>
+        </div>
+
         <script src="src/js/script.js" defer></script>
     </body>
 

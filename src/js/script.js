@@ -276,28 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
-// 5. PROJECT CARD HOVER EFFECTS (SIMPLE)
+// 5. PROJECT CARD HOVER EFFECTS (SIMPLE) - REMOVED (NOT USED)
 // ========================================
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Simple hover effects - no complex click logic
-    const projectCards = document.querySelectorAll('.project-card');
-    if (projectCards.length === 0) return;
-
-    projectCards.forEach(card => {
-        // Add hover class on mouseenter
-        card.addEventListener('mouseenter', () => {
-            card.classList.add('hover');
-        });
-
-        // Remove hover class on mouseleave
-        card.addEventListener('mouseleave', () => {
-            card.classList.remove('hover');
-        });
-    });
-
-    // Project card hover effects initialized
-});
 
 // ========================================
 // 6. TYPEWRITER ANIMATION (DESKTOP ONLY)
@@ -307,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleElement = document.getElementById('title-text');
         if (!titleElement) return;
 
-        const textToType = "Web & UI Designer · Visual Artist";
+        const textToType = "Digital Product Designer";
 
         // For mobile/tablet: show static text without animation
         if (window.innerWidth < 1280) {
@@ -520,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 typewriterController.stop();
                 typewriterController = null;
             }
-            titleElement.textContent = "Web & UI Designer · Visual Artist";
+            titleElement.textContent = "Digital Product Designer";
             titleElement.removeAttribute('data-typed');
         }
     });
@@ -550,76 +530,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========================================
-// 8. PERFORMANCE-OPTIMIZED HOVER EFFECTS
+// 8. PERFORMANCE-OPTIMIZED HOVER EFFECTS - REMOVED (NOT USED)
 // ========================================
-document.addEventListener('DOMContentLoaded', () => {
-    // Optimize hover effects for better performance
-    const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach(card => {
-        // Use passive event listeners for better performance
-        card.addEventListener('mouseenter', () => {
-            card.style.willChange = 'transform';
-            card.classList.add('hover');
-        }, { passive: true });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.willChange = 'auto';
-            card.classList.remove('hover');
-        }, { passive: true });
-    });
-});
 
 // ========================================
-// 9. SMOOTH SCROLLING OPTIMIZATION
+// 9. SMOOTH SCROLLING OPTIMIZATION - REMOVED (DUPLICATE)
 // ========================================
-document.addEventListener('DOMContentLoaded', () => {
-    // Optimize smooth scrolling with requestAnimationFrame
-    let isScrolling = false;
-
-    function smoothScrollTo(target, duration = 500) {
-        if (isScrolling) return;
-        isScrolling = true;
-
-        const start = window.pageYOffset;
-        const distance = target - start;
-        const startTime = performance.now();
-
-        function animation(currentTime) {
-            const timeElapsed = currentTime - startTime;
-            const progress = Math.min(timeElapsed / duration, 1);
-
-            // Optimized easing function for faster, smoother animation
-            const ease = progress < 0.5
-                ? 2 * progress * progress
-                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
-
-            window.scrollTo(0, start + distance * ease);
-
-            if (progress < 1) {
-                requestAnimationFrame(animation);
-            } else {
-                isScrolling = false;
-            }
-        }
-
-        requestAnimationFrame(animation);
-    }
-
-    // Apply to navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                const targetPosition = targetElement.offsetTop - 80;
-                smoothScrollTo(targetPosition);
-            }
-        });
-    });
-});
 
 // ========================================
 // 10. IMAGE LOADING ANIMATIONS
@@ -642,6 +558,59 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.add('image-loaded');
         }
     });
+});
+
+// ========================================
+// IMAGE MODAL FUNCTIONS
+// ========================================
+
+// Image Modal Functions
+function openImageModal(imageSrc, imageAlt) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+
+    modalImage.src = imageSrc;
+    modalImage.alt = imageAlt;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+// Initialize image modal
+function initImageModal() {
+    const modal = document.getElementById('imageModal');
+    const closeBtn = document.querySelector('.image-modal-close');
+
+    // Close modal when clicking the X button
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeImageModal);
+    }
+
+    // Close modal when clicking outside the image
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeImageModal();
+            }
+        });
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeImageModal();
+        }
+    });
+}
+
+// Initialize image modal when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initImageModal();
 });
 
 // ========================================
