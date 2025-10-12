@@ -1,10 +1,10 @@
 # MrBanika Portfolio
 
-Professional portfolio website for **Máximo Batista (MrBanika)** - Web & UI Designer · Visual Artist.
+Professional portfolio website for **Máximo Batista (MrBanika)** - Digital Product Designer
 
 ## 🎨 About
 
-This is a modern, responsive portfolio website showcasing my expertise as a **Web & UI Designer** and **Visual Artist**. The site features a clean, minimalist design with smooth animations, optimized performance, and a focus on visual storytelling that reflects my design philosophy.
+This is a modern, responsive portfolio website showcasing my expertise as a **Digital Product Designer**. The site features a clean, minimalist design with smooth animations, optimized performance, and a focus on visual storytelling that reflects my design philosophy.
 
 ## ✨ Key Features
 
@@ -235,4 +235,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-_Built with ❤️ by MrBanika - Web & UI Designer · Visual Artist_
+_Built with ❤️ by MrBanika -Digital Product Designer_
