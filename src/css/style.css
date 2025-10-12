@@ -1114,6 +1114,37 @@ html {
 /* ======================================================= */
 /* SOCIAL MEDIA BUTTONS ANIMATIONS */
 /* ======================================================= */
+
+/* Mobile Social Icons - Smaller size to avoid overlapping with hero text */
+@media (max-width: 768px) {
+  .social-links-mobile a {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1rem !important;
+    padding: 6px !important;
+  }
+  
+  .social-links-mobile {
+    gap: 12px !important;
+    bottom: 40px !important;
+  }
+}
+
+/* Instagram Mobile Specific (317px width) */
+@media (max-width: 320px) {
+  .social-links-mobile a {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.8rem !important;
+    padding: 4px !important;
+  }
+  
+  .social-links-mobile {
+    gap: 8px !important;
+    bottom: 30px !important;
+  }
+}
+
 @media (min-width: 1280px) {
   .social-btn {
     position: relative;
