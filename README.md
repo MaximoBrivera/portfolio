@@ -4,7 +4,7 @@ Professional portfolio website for **Máximo Batista (MrBanika)** - UI Designer 
 
 ## 🎨 About
 
-This is a modern, responsive portfolio website showcasing my expertise as a **UI Designer & Visual Designer**. The site features a clean, minimalist design with smooth animations, optimized performance, and a focus on visual storytelling that reflects my design philosophy.
+This is a modern, responsive portfolio website showcasing my expertise as a **UI Designer & Visual Designer**. The site features a clean, minimalist design with smooth animations, optimized performance, and a focus on visual storytelling that reflects my design philosophy. With a unique blend of technical and creative skills, I specialize in creating intuitive interfaces that balance functionality with visual impact.
 
 ## ✨ Key Features
 
@@ -15,6 +15,8 @@ This is a modern, responsive portfolio website showcasing my expertise as a **UI
 - **Accessibility First**: WCAG 2.1 compliant with proper ARIA labels and keyboard navigation
 - **Interactive Elements**: Typewriter animation, hover effects, and scroll snap functionality
 - **Visual Storytelling**: Carefully crafted layouts that showcase design skills and creativity
+- **Clean Mobile Menu**: Minimalist mobile navigation with text-only design
+- **Optimized Layout**: Perfect alignment between content and visual elements
 
 ## 🚀 Technologies & Tools
 
@@ -191,6 +193,20 @@ The site will be available at `http://localhost:3000`
 - **Event Tracking**: Hover, click, and scroll tracking ready
 - **Conversion Tracking**: Contact form and project view tracking
 
+## 📝 Recent Updates
+
+### Latest Changes (v2.0)
+
+- **Title Update**: Changed from "Digital Product Designer" to "UI Designer & Visual Designer"
+- **About Section Redesign**: 
+  - New personalized content highlighting technical and creative skills
+  - Improved layout alignment between text and image
+  - Simplified subtitle for better focus
+- **Hero Section**: Updated tagline to "Where user insight meets visual storytelling"
+- **Mobile Menu Enhancement**: Clean text-only design without background elements
+- **SEO Optimization**: Updated all meta tags and structured data for new title
+- **Content Refinement**: More personal and engaging about section text
+
 ## 🚀 Deployment
 
 ### GitHub Pages
@@ -213,9 +229,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Máximo Batista (MrBanika)**
 
-- **Role**: Web & UI Designer · Visual Artist
-- **Specialties**: User Interface Design, Visual Storytelling, Digital Experiences
-- **Philosophy**: Creating bold, clean, and impactful designs that solve user problems and deliver business results
+- **Role**: UI Designer & Visual Designer
+- **Specialties**: User Interface Design, Visual Storytelling, Digital Experiences, Graphic Design
+- **Philosophy**: Where user insight meets visual storytelling - creating intuitive interfaces that balance functionality with visual impact
+- **Background**: Unique blend of technical and creative skills with IT support experience and front-end knowledge
 
 ### Contact & Links
 
