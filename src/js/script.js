@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleElement = document.getElementById('title-text');
         if (!titleElement) return;
 
-        const textToType = "Digital Product Designer";
+        const textToType = "UI Designer & Visual Designer";
 
         // For mobile/tablet: show static text without animation
         if (window.innerWidth < 1280) {
@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 typewriterController.stop();
                 typewriterController = null;
             }
-            titleElement.textContent = "Digital Product Designer";
+            titleElement.textContent = "UI Designer & Visual Designer";
             titleElement.removeAttribute('data-typed');
         }
     });
