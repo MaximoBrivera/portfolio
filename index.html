@@ -463,31 +463,80 @@
             class="fixed top-0 left-0 w-full h-[70px] tablet:h-[65px] desktop:h-[80px] xl-desktop:h-[90px] px-[6%] tablet:px-[4%] desktop:px-[8%] xl-desktop:px-[10%] flex justify-between items-center bg-transparent z-[1000] transition-colors duration-300 main-header"
             role="banner">
             <nav class="flex justify-between items-center w-full navbar" role="navigation" aria-label="Main navigation">
+                <!-- Logo -->
                 <a href="#hero"
                     class="text-xl tablet:text-2xl desktop:text-3xl xl-desktop:text-4xl font-semibold text-white ml-0 tablet:ml-0 desktop:-ml-8 xl-desktop:-ml-12 font-poppins logo"
                     aria-label="Go to home - MrBanika">MrBanika</a>
 
+                <!-- Mobile Menu Toggle -->
                 <button
                     class="block desktop:hidden bg-none border-none text-white text-2xl cursor-pointer p-1 focus:outline-2 focus:outline-white focus:outline-offset-2 mobile-menu-toggle"
                     aria-label="Open navigation menu" aria-expanded="false">
                     <i class="fas fa-bars" aria-hidden="true"></i>
                 </button>
 
-                <ul
-                    class="fixed desktop:static top-[60px] desktop:top-auto -left-full desktop:left-auto w-full desktop:w-auto h-[calc(100vh-60px)] desktop:h-auto bg-black/95 desktop:bg-transparent backdrop-blur-lg desktop:backdrop-blur-none flex-col desktop:flex-row justify-start desktop:justify-center items-center desktop:items-center pt-12 desktop:pt-0 transition-all duration-300 list-none flex ml-auto nav-links">
-                    <li class="my-5 desktop:my-0 desktop:ml-12 xl-desktop:ml-16">
+                <!-- Desktop Navigation -->
+                <div class="hidden desktop:flex desktop:items-center desktop:gap-8">
+                    <!-- Navigation Links -->
+                    <div class="flex gap-8">
+                        <a href="#hero"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="Return to top">Home</a>
                         <a href="#about"
-                            class="text-white text-lg desktop:text-xl xl-desktop:text-2xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="Learn more about me">About</a>
+                        <a href="#work"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="View work and projects">Work</a>
+                        <a href="#visual-art"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="View visual art and design work">Visual Art</a>
+                    </div>
+
+                    <!-- Separator -->
+                    <div class="w-px h-6 bg-white/30"></div>
+
+                    <!-- Social Icons -->
+                    <div class="flex gap-4">
+                        <a href="https://www.linkedin.com/in/maximo-batista-2954b1226/"
+                            class="text-white text-lg no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="Max Batista's LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:maximo.bxxiv@hotmail.com"
+                            class="text-white text-lg no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="Send email to Max Batista">
+                            <i class="far fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/maxbatistar/"
+                            class="text-white text-lg no-underline transition-colors duration-300 hover:text-red-500"
+                            aria-label="Max Batista's Instagram profile" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <ul
+                    class="fixed desktop:hidden top-[60px] -left-full w-full h-[calc(100vh-60px)] bg-black/95 backdrop-blur-lg flex-col justify-start items-center pt-12 transition-all duration-300 list-none flex nav-links">
+                    <li class="my-5">
+                        <a href="#hero"
+                            class="text-cyan-400 text-lg font-medium no-underline transition-colors duration-300 py-2 px-5"
+                            aria-label="Return to top">Home</a>
+                    </li>
+                    <li class="my-5">
+                        <a href="#about"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 py-2 px-5"
                             aria-label="Learn more about me">About</a>
                     </li>
-                    <li class="my-5 desktop:my-0 desktop:ml-12 xl-desktop:ml-16">
+                    <li class="my-5">
                         <a href="#work"
-                            class="text-white text-lg desktop:text-xl xl-desktop:text-2xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 py-2 px-5"
                             aria-label="View work and projects">Work</a>
                     </li>
-                    <li class="my-5 desktop:my-0 desktop:ml-12 xl-desktop:ml-16">
+                    <li class="my-5">
                         <a href="#visual-art"
-                            class="text-white text-lg desktop:text-xl xl-desktop:text-2xl no-underline font-medium font-inter transition-all duration-300 py-2 px-5 desktop:p-0 hover:text-gray-300 desktop:hover:scale-105"
+                            class="text-white text-lg font-medium no-underline transition-colors duration-300 py-2 px-5"
                             aria-label="View visual art and design work">Visual Art</a>
                     </li>
                 </ul>
@@ -504,46 +553,53 @@
             <section id="hero"
                 class="relative h-screen flex items-center justify-center tablet:justify-start overflow-hidden p-0 shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.1)] hero-section snap-start"
                 role="banner" style="background-position: center 60%;">
-                <!-- Background Image -->
-                <picture class="absolute inset-0 w-full h-full hero-background">
-                    <source media="(max-width: 768px)" srcset="src/assets/images/q2-mobile.webp" type="image/webp">
-                    <source srcset="src/assets/images/q2.webp" type="image/webp">
-                    <img src="src/assets/images/q2.webp" alt="Max Batista MrBanika - UI/UX Designer & Visual Designer Portfolio Hero Background"
-                        class="w-full h-full object-cover object-top" loading="eager"
-                        width="1920" height="1080">
-                </picture>
 
                 <!-- Hero Content -->
                 <div
-                    class="px-5 tablet:px-10 desktop:px-16 xl-desktop:px-20 pb-12 tablet:pb-20 desktop:pb-32 xl-desktop:pb-40 pl-5 tablet:pl-20 desktop:pl-20 xl-desktop:pl-24 z-[2] absolute mr-0 tablet:mr-auto desktop:mr-auto max-w-full tablet:max-w-[60%] desktop:max-w-[45%] xl-desktop:max-w-[40%] text-center tablet:text-left desktop:text-left flex flex-col justify-center items-center tablet:items-start desktop:items-start hero-content">
-                    <h1
-                        class="text-3xl tablet:text-4xl desktop:text-4xl xl-desktop:text-5xl mb-2 tablet:mb-3 desktop:mb-3 xl-desktop:mb-4 font-space-grotesk font-semibold leading-tight desktop:leading-[1.1] xl-desktop:leading-[1.05]">
-                        <span class="title-text" id="title-text">UI/UX Designer</span>
-                    </h1>
+                    class="px-5 tablet:px-10 desktop:px-16 xl-desktop:px-20 pb-12 tablet:pb-20 desktop:pb-32 xl-desktop:pb-40 pl-5 tablet:pl-20 desktop:pl-40 xl-desktop:pl-44 z-[2] absolute mr-0 tablet:mr-auto desktop:mr-auto max-w-full tablet:max-w-[60%] desktop:max-w-[50%] xl-desktop:max-w-[45%] text-center tablet:text-left desktop:text-left flex flex-col justify-center items-center tablet:items-start desktop:items-start hero-content">
+                    <!-- Dynamic Title with Animation -->
+                    <div class="mb-6 tablet:mb-8 desktop:mb-10 xl-desktop:mb-12 desktop:-mt-8 xl-desktop:-mt-10">
+                        <h1 class="text-4xl tablet:text-5xl desktop:text-7xl xl-desktop:text-8xl font-space-grotesk font-semibold leading-tight desktop:leading-[1.1] xl-desktop:leading-[1.05] mb-2">
+                            <span class="title-text" id="title-text">UI/UX Designer</span>
+                        </h1>
+                        <h2 class="text-2xl tablet:text-3xl desktop:text-4xl xl-desktop:text-5xl font-inter font-light text-white/70 leading-relaxed desktop:ml-0 xl-desktop:ml-0">
+                            <span class="inline-block">Hello, I'm</span>
+                            <span class="text-white/90 font-medium ml-2">Máximo Batista</span>
+                        </h2>
+                    </div>
+
+
+                    <!-- Professional Description -->
+                    <div class="max-w-lg tablet:max-w-xl desktop:max-w-2xl">
+                        <p class="text-base tablet:text-lg desktop:text-xl xl-desktop:text-2xl mb-4 tablet:mb-6 desktop:mb-8 font-inter font-light text-white/80 leading-relaxed desktop:ml-16 xl-desktop:ml-20 desktop:-mt-2 xl-desktop:-mt-3">
+                            Driving growth through user-centered design and innovation.
+                        </p>
+
+                    </div>
+
+                    <!-- Mobile-only simplified version -->
+                    <div class="mobile-only-content block tablet:hidden desktop:hidden">
+                        <div class="mb-6">
+                            <p class="text-base font-inter font-light text-white/80 leading-relaxed mb-4">
+                                I turn complex problems into beautiful solutions
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Desktop Social Links (Right Side) -->
-                <div class="hidden desktop:flex xl-desktop:flex fixed right-20 xl-desktop:right-20 top-1/2 transform -translate-y-1/2 z-[3] flex-col gap-5 social-links-right"
-                    role="navigation" aria-label="Social media links">
-                    <a href="https://www.linkedin.com/in/maximo-batista-2954b1226/"
-                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg social-btn linkedin"
-                        aria-label="Max Batista's LinkedIn profile" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                    </a>
-                    <a href="mailto:maximo.bxxiv@hotmail.com"
-                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg social-btn email"
-                        aria-label="Send email to Max Batista">
-                        <i class="far fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.instagram.com/maxbatistar/"
-                        class="text-3xl xl-desktop:text-4xl p-0 border-2 border-white/30 rounded-full w-16 h-16 xl-desktop:w-18 xl-desktop:h-18 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/60 hover:-translate-y-1 hover:shadow-lg social-btn instagram"
-                        aria-label="Max Batista's Instagram profile" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram" aria-hidden="true"></i>
-                    </a>
+                <!-- Desktop Profile Image (Right Side) -->
+                <div class="hidden desktop:flex xl-desktop:flex fixed right-48 xl-desktop:right-48 top-1/2 transform -translate-y-1/2 z-[3] flex-col gap-5">
+                    <div class="w-[550px] xl-desktop:w-[600px] h-[650px] xl-desktop:h-[700px] bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                        <img src="src/assets/images/maximo.webp"
+                             alt="Max Batista MrBanika Professional Headshot - UI/UX Designer & Visual Designer Portfolio Photo"
+                             class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-500"
+                             loading="lazy">
+                    </div>
                 </div>
+
 
                 <!-- Mobile/Tablet Social Links (Bottom Center) -->
-                <div class="flex desktop:hidden xl-desktop:hidden absolute bottom-16 tablet:bottom-20 left-1/2 transform -translate-x-1/2 z-[3] gap-5 social-links-mobile"
+                <div class="flex desktop:hidden xl-desktop:hidden absolute bottom-24 tablet:bottom-28 left-1/2 transform -translate-x-1/2 z-[3] gap-5 social-links-mobile"
                     role="navigation" aria-label="Social media links">
                     <a href="https://www.linkedin.com/in/maximo-batista-2954b1226/"
                         class="text-3xl tablet:text-3xl p-3 border-2 border-white/50 rounded-full w-16 h-16 tablet:w-16 tablet:h-16 flex items-center justify-center transition-all duration-300 hover:bg-white/20 hover:border-white/80 hover:-translate-y-1 hover:shadow-lg bg-black/40 backdrop-blur-sm"
@@ -590,11 +646,11 @@
                     </div>
                 </div>
 
-                <!-- Desktop Layout: Two Columns -->
-                <div class="desktop:flex desktop:items-start desktop:gap-16 xl-desktop:gap-20 desktop:max-w-7xl desktop:mx-auto">
-                    <!-- Left Column: Text Content -->
-                    <div class="desktop:flex-1 desktop:max-w-[600px] desktop:text-left">
-                        <div class="mb-8 tablet:mb-10 desktop:mb-6 xl-desktop:mb-8 text-left about-content">
+                <!-- Desktop Layout: Centered Text -->
+                <div class="desktop:flex desktop:justify-center desktop:items-center desktop:max-w-7xl desktop:mx-auto">
+                    <!-- Text Content (Centered) -->
+                    <div class="desktop:max-w-[800px] xl-desktop:max-w-[900px] desktop:text-center">
+                        <div class="mb-8 tablet:mb-10 desktop:mb-6 xl-desktop:mb-8 desktop:text-center about-content">
                             <div class="text-content">
                                 <p
                                     class="mb-6 tablet:mb-8 desktop:mb-8 xl-desktop:mb-10 text-sm tablet:text-base desktop:text-base xl-desktop:text-lg leading-relaxed desktop:leading-loose xl-desktop:leading-loose font-inter font-light about-intro">
@@ -612,7 +668,7 @@
                                 <div class="flex-1 desktop:block hidden"></div>
                 </div>
 
-                            <div class="mt-8 tablet:mt-10 desktop:mt-0 xl-desktop:mt-0 text-center desktop:text-left skills-list"
+                            <div class="mt-8 tablet:mt-10 desktop:mt-0 xl-desktop:mt-0 text-center desktop:text-center skills-list"
                     role="complementary" aria-label="Technical skills">
                     <span
                                     class="font-inter font-normal text-sm tablet:text-base desktop:text-xl xl-desktop:text-2xl block p-2 tablet:p-3 desktop:p-2 bg-white/5 tablet:bg-white/8 desktop:bg-white/5 rounded tablet:rounded-lg desktop:rounded-lg"
@@ -622,19 +678,6 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Profile Photo (Desktop Only) -->
-                    <div class="hidden desktop:block desktop:flex-1 desktop:max-w-[400px] xl-desktop:max-w-[450px]">
-                        <div class="relative w-full">
-                            <!-- Placeholder for profile photo -->
-                            <div class="w-full h-[500px] xl-desktop:h-[550px] bg-gray-800 rounded-2xl xl-desktop:rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                                <!-- Profile photo -->
-                                <img src="src/assets/images/maximo.webp"
-                                     alt="Max Batista MrBanika Professional Headshot - UI/UX Designer & Visual Designer Portfolio Photo"
-                                     class="w-full h-full object-cover object-top"
-                                     loading="lazy">
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
             </section>

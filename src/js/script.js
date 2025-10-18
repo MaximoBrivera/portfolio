@@ -477,32 +477,22 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // Initialize typewriter animation
-    let typewriterController = initTypewriterAnimation();
+    // Initialize typewriter animation - DISABLED
+    // let typewriterController = initTypewriterAnimation();
+    let typewriterController = null;
 
-    // Re-initialize on window resize
+    // Re-initialize on window resize - STATIC TEXT ONLY
     window.addEventListener('resize', () => {
         const titleElement = document.getElementById('title-text');
         if (!titleElement) return;
 
-        if (window.innerWidth >= 1280) {
-            // Switch to desktop: start typewriter animation
-            if (!titleElement.hasAttribute('data-typed')) {
-                titleElement.setAttribute('data-typed', 'true');
-                if (typewriterController) {
-                    typewriterController.stop();
-                }
-                typewriterController = initTypewriterAnimation();
-            }
-        } else {
-            // Switch to mobile/tablet: show static text
-            if (typewriterController) {
-                typewriterController.stop();
-                typewriterController = null;
-            }
-            titleElement.textContent = "UI/UX Designer";
-            titleElement.removeAttribute('data-typed');
+        // Always show static text - no animations
+        if (typewriterController) {
+            typewriterController.stop();
+            typewriterController = null;
         }
+        titleElement.textContent = "UI/UX Designer";
+        titleElement.removeAttribute('data-typed');
     });
 });
 

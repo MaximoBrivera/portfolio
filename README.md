@@ -197,11 +197,11 @@ The site will be available at `http://localhost:3000`
 
 ### Latest Changes (v2.1)
 
-- **Hero Section Redesign**: 
+- **Hero Section Redesign**:
   - Simplified title to "UI/UX Designer" for better focus
   - Removed subtitle for cleaner, more impactful design
   - Streamlined hero content for maximum visual impact
-- **About Section Content Update**: 
+- **About Section Content Update**:
   - New personal and engaging content highlighting unique background
   - Emphasis on IT support experience and user empathy
   - Focus on front-end development skills and practical solutions
