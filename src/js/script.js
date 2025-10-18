@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const titleElement = document.getElementById('title-text');
         if (!titleElement) return;
 
-        const textToType = "UI Designer & Visual Designer";
+        const textToType = "UI/UX Designer";
 
         // For mobile/tablet: show static text without animation
         if (window.innerWidth < 1280) {
@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 typewriterController.stop();
                 typewriterController = null;
             }
-            titleElement.textContent = "UI Designer & Visual Designer";
+            titleElement.textContent = "UI/UX Designer";
             titleElement.removeAttribute('data-typed');
         }
     });

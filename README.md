@@ -1,10 +1,10 @@
 # MrBanika Portfolio
 
-Professional portfolio website for **Máximo Batista (MrBanika)** - UI Designer & Visual Designer
+Professional portfolio website for **Máximo Batista (MrBanika)** - UI/UX Designer & Visual Designer
 
 ## 🎨 About
 
-This is a modern, responsive portfolio website showcasing my expertise as a **UI Designer & Visual Designer**. The site features a clean, minimalist design with smooth animations, optimized performance, and a focus on visual storytelling that reflects my design philosophy. With a unique blend of technical and creative skills, I specialize in creating intuitive interfaces that balance functionality with visual impact.
+This is a modern, responsive portfolio website showcasing my expertise as a **UI/UX Designer & Visual Designer**. The site features a clean, minimalist design with smooth animations, optimized performance, and a focus on visual storytelling that reflects my design philosophy. With a unique blend of technical and creative skills, I specialize in creating intuitive interfaces that balance functionality with visual impact.
 
 ## ✨ Key Features
 
@@ -197,8 +197,8 @@ The site will be available at `http://localhost:3000`
 
 ### Latest Changes (v2.0)
 
-- **Title Update**: Changed from "Digital Product Designer" to "UI Designer & Visual Designer"
-- **About Section Redesign**: 
+- **Title Update**: Changed from "Digital Product Designer" to "UI/UX Designer & Visual Designer"
+- **About Section Redesign**:
   - New personalized content highlighting technical and creative skills
   - Improved layout alignment between text and image
   - Simplified subtitle for better focus
@@ -229,7 +229,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Máximo Batista (MrBanika)**
 
-- **Role**: UI Designer & Visual Designer
+- **Role**: UI/UX Designer & Visual Designer
 - **Specialties**: User Interface Design, Visual Storytelling, Digital Experiences, Graphic Design
 - **Philosophy**: Where user insight meets visual storytelling - creating intuitive interfaces that balance functionality with visual impact
 - **Background**: Unique blend of technical and creative skills with IT support experience and front-end knowledge
@@ -252,4 +252,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-_Built with ❤️ by MrBanika - UI Designer & Visual Designer_
+_Built with ❤️ by MrBanika - UI/UX Designer & Visual Designer_
