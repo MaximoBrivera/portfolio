@@ -195,14 +195,18 @@ The site will be available at `http://localhost:3000`
 
 ## 📝 Recent Updates
 
-### Latest Changes (v2.0)
+### Latest Changes (v2.1)
 
-- **Title Update**: Changed from "Digital Product Designer" to "UI/UX Designer & Visual Designer"
-- **About Section Redesign**:
-  - New personalized content highlighting technical and creative skills
-  - Improved layout alignment between text and image
-  - Simplified subtitle for better focus
-- **Hero Section**: Updated tagline to "Where user insight meets visual storytelling"
+- **Hero Section Redesign**: 
+  - Simplified title to "UI/UX Designer" for better focus
+  - Removed subtitle for cleaner, more impactful design
+  - Streamlined hero content for maximum visual impact
+- **About Section Content Update**: 
+  - New personal and engaging content highlighting unique background
+  - Emphasis on IT support experience and user empathy
+  - Focus on front-end development skills and practical solutions
+  - Professional tone with personal touch
+- **Title Consistency**: Updated all instances to "UI/UX Designer & Visual Designer"
 - **Mobile Menu Enhancement**: Clean text-only design without background elements
 - **SEO Optimization**: Updated all meta tags and structured data for new title
 - **Content Refinement**: More personal and engaging about section text
