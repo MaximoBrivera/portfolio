@@ -8,12 +8,41 @@ Sitemap: https://mrbanika.github.io/portfolio/sitemap.xml
 Disallow: /private/
 Disallow: *.log
 Disallow: /temp/
+Disallow: /test.html
+Disallow: /live-server.json
 
 # Allow crawling of CSS and JS files for better SEO
 Allow: /src/css/style.css
 Allow: /src/js/script.js
 Allow: /src/assets/images/
+Allow: /src/assets/Covers/
+Allow: /src/assets/icons/
 
-# Crawl-delay (optional, in seconds)
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
 Crawl-delay: 1
 
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# General crawl delay
+Crawl-delay: 1
+
+# Host directive (helps with duplicate content issues)
+Host: https://mrbanika.github.io

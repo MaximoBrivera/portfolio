@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Portfolio Images -->
+    <url>
+        <loc>https://mrbanika.github.io/portfolio/</loc>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/images/q2.webp</image:loc>
+            <image:title>Máximo Batista - UI/UX Designer Portfolio Hero Image</image:title>
+            <image:caption>Professional UI/UX Designer & Visual Designer portfolio showcasing digital design projects and creative work</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+    </url>
+
+    <!-- About Section Images -->
+    <url>
+        <loc>https://mrbanika.github.io/portfolio/#about</loc>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/images/maximo.webp</image:loc>
+            <image:title>Máximo Batista - Professional Headshot</image:title>
+            <image:caption>UI/UX Designer & Visual Designer professional headshot for portfolio and business use</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+    </url>
+
+    <!-- Work Section Images -->
+    <url>
+        <loc>https://mrbanika.github.io/portfolio/#work</loc>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/images/web11.webp</image:loc>
+            <image:title>CoderHouse Educational Platform - UI/UX Design</image:title>
+            <image:caption>Modern educational platform interface design showcasing user-centered design principles and responsive web design</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/images/web.webp</image:loc>
+            <image:title>Style Fashion E-commerce Website - UI/UX Design</image:title>
+            <image:caption>Modern responsive e-commerce website design with focus on user experience and conversion optimization</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/images/q2.webp</image:loc>
+            <image:title>Mobile App Design - iOS Android UI/UX</image:title>
+            <image:caption>Cross-platform mobile application design showcasing modern UI/UX principles for iOS and Android</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+    </url>
+
+    <!-- Visual Art Section Images -->
+    <url>
+        <loc>https://mrbanika.github.io/portfolio/#visual-art</loc>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/Covers/Bones.webp</image:loc>
+            <image:title>Bones - Album Cover Art Design</image:title>
+            <image:caption>Creative album cover art design showcasing visual storytelling and graphic design skills</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/Covers/Briar.webp</image:loc>
+            <image:title>Briar - Album Cover Art Design</image:title>
+            <image:caption>Creative album cover art design showcasing visual storytelling and graphic design skills</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/Covers/Chains.webp</image:loc>
+            <image:title>Chains - Album Cover Art Design</image:title>
+            <image:caption>Creative album cover art design showcasing visual storytelling and graphic design skills</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/Covers/DevilTwins.webp</image:loc>
+            <image:title>Devil Twins - Album Cover Art Design</image:title>
+            <image:caption>Creative album cover art design showcasing visual storytelling and graphic design skills</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/Covers/Queen.webp</image:loc>
+            <image:title>Queen - Album Cover Art Design</image:title>
+            <image:caption>Creative album cover art design showcasing visual storytelling and graphic design skills</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://mrbanika.github.io/portfolio/src/assets/Covers/SalariMan.webp</image:loc>
+            <image:title>Salaryman - Album Cover Art Design</image:title>
+            <image:caption>Creative album cover art design showcasing visual storytelling and graphic design skills</image:caption>
+            <image:license>https://creativecommons.org/licenses/by/4.0/</image:license>
+        </image:image>
+    </url>
+
+</urlset>
