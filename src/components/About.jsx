@@ -1,4 +1,5 @@
 import React from 'react'
+import maximoImage from '../assets/images/maximo.webp'
 
 const About = () => {
   return (
@@ -21,7 +22,7 @@ const About = () => {
           <div className="w-full max-w-[280px] sm:max-w-[320px]">
             <div className="w-full h-[300px] sm:h-[350px] bg-gray-800 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img
-                src="src/assets/images/maximo.webp"
+                src={maximoImage}
                 alt="Max Batista MrBanika Professional Headshot - UI/UX Designer & Visual Designer"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"

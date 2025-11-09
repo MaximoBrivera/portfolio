@@ -1,5 +1,12 @@
 import React, { useContext } from 'react'
 import { ImageModalContext } from '../contexts/ImageModalContext'
+import bonesCover from '../assets/Covers/Bones.webp'
+import briarCover from '../assets/Covers/Briar.webp'
+import chainsCover from '../assets/Covers/Chains.webp'
+import devilTwinsCover from '../assets/Covers/DevilTwins.webp'
+import queenCover from '../assets/Covers/Queen.webp'
+import salariManCover from '../assets/Covers/SalariMan.webp'
+import msProblemCover from '../assets/Covers/Ms.Problem.webp'
 
 const VisualArt = () => {
   const { openModal } = useContext(ImageModalContext)
@@ -9,49 +16,49 @@ const VisualArt = () => {
       id: 1,
       title: 'Bones',
       description: 'Dark and atmospheric album cover design with striking visual elements and bold typography.',
-      image: 'src/assets/Covers/Bones.webp',
+      image: bonesCover,
       alt: 'Bones Album Cover by MrBanika',
     },
     {
       id: 2,
       title: 'Briar',
       description: 'Elegant and sophisticated album cover with intricate details and refined typography.',
-      image: 'src/assets/Covers/Briar.webp',
+      image: briarCover,
       alt: 'Briar Album Cover by MrBanika',
     },
     {
       id: 3,
       title: 'Chains',
       description: 'Powerful and symbolic album cover with industrial elements and strong visual impact.',
-      image: 'src/assets/Covers/Chains.webp',
+      image: chainsCover,
       alt: 'Chains Album Cover by MrBanika',
     },
     {
       id: 4,
       title: 'Devil Twins',
       description: 'Dark and mysterious album cover with dual character design and gothic elements.',
-      image: 'src/assets/Covers/DevilTwins.webp',
+      image: devilTwinsCover,
       alt: 'Devil Twins Album Cover by MrBanika',
     },
     {
       id: 5,
       title: 'Queen',
       description: 'Regal and majestic album cover with royal aesthetics and elegant design elements.',
-      image: 'src/assets/Covers/Queen.webp',
+      image: queenCover,
       alt: 'Queen Album Cover by MrBanika',
     },
     {
       id: 6,
       title: 'Salaryman',
       description: 'Corporate and professional album cover with business aesthetics and modern design elements.',
-      image: 'src/assets/Covers/SalariMan.webp',
+      image: salariManCover,
       alt: 'Salaryman Album Cover by MrBanika',
     },
     {
       id: 7,
       title: 'Ms.Problem',
       description: 'Bold and striking album cover design with powerful visual elements and contemporary aesthetics.',
-      image: 'src/assets/Covers/Ms.Problem.webp',
+      image: msProblemCover,
       alt: 'Ms.Problem Album Cover by MrBanika',
     },
   ]

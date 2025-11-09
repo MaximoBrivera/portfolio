@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHeroParallax } from '../hooks/useHeroParallax'
+import maximoImage from '../assets/images/maximo.webp'
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -118,7 +119,7 @@ const Hero = () => {
               {/* Image Container */}
               <div className="relative w-full h-full bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl group hover:border-red-600/30 transition-all duration-500">
                 <img
-                  src="src/assets/images/maximo.webp"
+                  src={maximoImage}
                   alt="Max Batista MrBanika Professional Headshot - UI/UX Designer"
                   className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   loading="eager"

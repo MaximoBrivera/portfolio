@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import web11Desktop from '../assets/images/web11.webp'
+import web11Mobile from '../assets/images/web11-mobile.webp'
+import webDesktop from '../assets/images/web.webp'
+import webMobile from '../assets/images/web-mobile.webp'
+import q2Desktop from '../assets/images/q2.webp'
+import q2Mobile from '../assets/images/q2-mobile.webp'
 
 const Work = () => {
   const [activeCard, setActiveCard] = useState(null)
@@ -8,8 +14,8 @@ const Work = () => {
       id: 1,
       title: 'Website Project | CoderHouse',
       description: 'Educational platform design focused on user experience and intuitive interface.',
-      imageDesktop: 'src/assets/images/web11.webp',
-      imageMobile: 'src/assets/images/web11-mobile.webp',
+      imageDesktop: web11Desktop,
+      imageMobile: web11Mobile,
       link: 'https://www.figma.com/proto/CtHIa13H8GWdNsoGn2iy2x?node-id=0-1&t=UkDoAGipecgeUzJ1-6',
       alt: 'CoderHouse Educational Platform Design - Modern UI UX Interface Web Design Project by MrBanika',
     },
@@ -17,8 +23,8 @@ const Work = () => {
       id: 2,
       title: 'Website Project | Style',
       description: 'Modern e-commerce with responsive design and optimized shopping experience.',
-      imageDesktop: 'src/assets/images/web.webp',
-      imageMobile: 'src/assets/images/web-mobile.webp',
+      imageDesktop: webDesktop,
+      imageMobile: webMobile,
       link: 'https://www.figma.com/proto/CjS86HpjDMpQUUvkYJUQri/ECOMMERCE-style?page-id=0%3A1&node-id=50-238&viewport=-287%2C40%2C0.18&t=DwvAGQFhRzzunP5V-1&scaling=contain&content-scaling=fixed',
       alt: 'Style Fashion E-commerce Website Design - Modern Responsive Online Store UI UX Design Project by MrBanika',
     },
@@ -26,8 +32,8 @@ const Work = () => {
       id: 3,
       title: 'Mobile App | Design',
       description: 'Innovative mobile interface design with focus on user experience and modern aesthetics.',
-      imageDesktop: 'src/assets/images/q2.webp',
-      imageMobile: 'src/assets/images/q2-mobile.webp',
+      imageDesktop: q2Desktop,
+      imageMobile: q2Mobile,
       link: 'https://www.figma.com/design/CtHIa13H8GWdNsoGn2iy2x/CoderHouse?node-id=0-1&t=dYZQA17KDUJQoUBN-1',
       alt: 'Mobile App Design Project - Modern UI UX Interface Design for iOS Android by MrBanika',
     },
