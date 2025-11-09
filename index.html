@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Security Headers (Note: frame-ancestors and X-Frame-Options only work in HTTP headers, not meta tags) -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; object-src 'none';">
+        <meta http-equiv="X-Content-Type-Options" content="nosniff">
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+        <meta name="referrer" content="strict-origin-when-cross-origin">
+        <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
+
+        <title>Máximo Batista - UI/UX Designer & Visual Designer | Portfolio 2024 | Freelance Available</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Máximo Batista (MrBanika) - Professional UI/UX Designer & Visual Designer. Creating intuitive digital experiences for web and mobile. Specialized in user-centered design, mobile apps, web design, and visual storytelling. Available for freelance projects worldwide.">
+        <meta name="author" content="Máximo Batista">
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+        <meta name="keywords" content="ui designer, ux designer, visual designer, product designer, user experience designer, user interface designer, web designer, mobile app designer, figma designer, freelance designer, portfolio, ux research, wireframing, prototyping, design systems, responsive design, modern web design, creative director, design consultant, digital design, app design, website design, user centered design, design thinking, interaction design, visual storytelling, brand design, graphic design">
+        <link rel="canonical" href="https://mrbanika.github.io/portfolio">
+
+    <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Máximo Batista - UI/UX Designer & Visual Designer | Portfolio 2024">
+    <meta property="og:description" content="Professional UI/UX Designer & Visual Designer creating intuitive digital experiences for web and mobile. Specialized in user-centered design, mobile apps, and visual storytelling. Available for freelance projects worldwide.">
+        <meta property="og:image" content="https://mrbanika.github.io/portfolio/src/assets/images/q2.webp">
+        <meta property="og:url" content="https://mrbanika.github.io/portfolio">
+        <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Máximo Batista - UI/UX Designer & Visual Designer | Portfolio 2024">
+    <meta name="twitter:description" content="Professional UI/UX Designer creating intuitive digital experiences for web and mobile. Available for freelance projects worldwide.">
+        <meta name="twitter:image" content="https://mrbanika.github.io/portfolio/src/assets/images/q2.webp">
+
+        <!-- Preconnect to external domains -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </noscript>
+
+    <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'inter': ['Inter', 'sans-serif'],
+                            'poppins': ['Poppins', 'sans-serif'],
+                            'montserrat': ['Montserrat', 'sans-serif'],
+                        },
+                        colors: {
+                            'dark-bg': '#000000',
+                        },
+                        screens: {
+                            'tablet': '768px',
+                            'desktop': '1279px',
+                            'xl-desktop': '1440px',
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "mrbanika-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Máximo Batista (MrBanika) - UI/UX Designer & Visual Artist",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "keywords": [
+    "portfolio",
+    "ui-ux",
+    "designer",
+    "visual-artist",
+    "web-development",
+    "responsive-design",
+    "react"
+  ],
+  "author": {
+    "name": "Máximo Batista",
+    "email": "maximo.bxxiv@hotmail.com",
+    "url": "https://github.com/mrbanika"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrbanika/portfolio.git"
+  },
+  "homepage": "https://mrbanika.github.io/portfolio",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
