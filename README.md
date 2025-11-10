@@ -1,6 +1,6 @@
 # Máximo Batista (MrBanika) - Portfolio Website
 
-Professional portfolio website for Máximo Batista, UI/UX Designer & Visual Designer.
+Professional portfolio website for Máximo Batista, UI/UX Designer & IT Support.
 
 ## 🚀 Features
 

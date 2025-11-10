@@ -14,7 +14,7 @@ const About = () => {
           About
         </h2>
         <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter font-normal text-white mb-8 sm:mb-10 md:mb-12 lg:mb-16 leading-snug about-subtitle">
-          UI/UX Designer & Visual Designer
+          UI/UX Designer & IT Support
         </h3>
 
         {/* Profile Photo for Mobile/Tablet */}
@@ -23,7 +23,7 @@ const About = () => {
             <div className="w-full h-[300px] sm:h-[350px] bg-gray-800 rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img
                 src={maximoImage}
-                alt="Max Batista MrBanika Professional Headshot - UI/UX Designer & Visual Designer"
+                alt="Max Batista MrBanika Professional Headshot - UI/UX Designer & IT Support"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
                 width="320"
@@ -37,7 +37,7 @@ const About = () => {
         <div className="max-w-3xl mx-auto about-content">
           <div className="text-content mb-8 sm:mb-10 md:mb-12">
             <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose font-inter font-light about-intro">
-              Hey, I'm Máximo Batista (MrBanika) — a UI/UX & Visual Designer who bridges logic and creativity to
+              Hey, I'm Máximo Batista (MrBanika) — a UI/UX Designer & IT Support who bridges logic and creativity to
               craft digital experiences that truly connect with people.
             </p>
             <p className="mb-6 sm:mb-8 text-sm sm:text-base md:text-lg leading-relaxed md:leading-loose font-inter font-light about-text">

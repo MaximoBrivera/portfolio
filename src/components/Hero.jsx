@@ -66,12 +66,12 @@ const Hero = () => {
 
             {/* Subtitle */}
             <h2 className="mb-4 sm:mb-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-montserrat font-semibold text-white/90 hero-subtitle">
-              UI/UX Designer
+              UI/UX Designer & IT Support
             </h2>
 
             {/* Description */}
             <p className="mb-8 sm:mb-10 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl hero-description">
-              I craft intuitive and beautiful digital experiences for web and mobile
+              I craft intuitive digital experiences and provide reliable technical support for web and mobile
             </p>
 
             {/* CTA Buttons */}
@@ -120,7 +120,7 @@ const Hero = () => {
               <div className="relative w-full h-full bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl group hover:border-red-600/30 transition-all duration-500">
                 <img
                   src={maximoImage}
-                  alt="Max Batista MrBanika Professional Headshot - UI/UX Designer"
+                  alt="Max Batista MrBanika Professional Headshot - UI/UX Designer & IT Support"
                   className="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
                   loading="eager"
                   width="420"
