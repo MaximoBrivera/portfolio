@@ -71,7 +71,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="mb-8 sm:mb-10 text-base sm:text-lg md:text-xl text-white/70 leading-relaxed max-w-2xl hero-description">
-              I craft intuitive digital experiences and provide reliable technical support for web and mobile
+              I design clean, user-friendly interfaces and ensure reliable tech performance for smooth digital experiences.
             </p>
 
             {/* CTA Buttons */}
